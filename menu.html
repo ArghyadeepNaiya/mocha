@@ -7,33 +7,45 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2378350f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3'/></svg>">
 </head>
 <body>
     <header class="main-header desktop-only-header">
         <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mocha Bar Logo" class="logo-img">
+            <div class="brand-section">
+                <a href="index.html" style="text-decoration: none; color: inherit; display: flex;">
+                    <div class="logo-wrapper">
+                        <!-- Simulated logo -->
+                        <div class="logo-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3"/>
+                            </svg>
+                        </div>
+                    </div>
                 </a>
-                <div class="logo-text">
-                    <h1>Mocha Bar</h1>
+                <div class="brand-text">
+                    <h1 class="brand-title">Mocha Bar</h1>
                 </div>
             </div>
             
-            <div class="search-bar">
-                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
-                <input type="text" placeholder="Search for items...">
+            <div class="search-container desktop-only">
+                <div class="search-bar">
+                    <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search for items..." class="search-input">
+                </div>
             </div>
             
-            <div class="veg-toggle">
-                <span>Veg only</span>
-                <label class="switch">
+            <div class="veg-toggle-container">
+                <span class="diet-icon veg" title="Veg Only"></span>
+                <label class="toggle-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="toggle-slider"></span>
                 </label>
+                <span class="diet-icon non-veg" title="Non-Veg Only"></span>
+                <span class="diet-icon all" title="Show All"></span>
             </div>
         </div>
     </header>
@@ -45,12 +57,14 @@
                     <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
                 </svg>
             </a>
-            <div class="veg-toggle">
-                <span>Veg only</span>
-                <label class="switch">
+            <div class="veg-toggle-container">
+                <span class="diet-icon veg" title="Veg Only"></span>
+                <label class="toggle-switch">
                     <input type="checkbox">
-                    <span class="slider round"></span>
+                    <span class="toggle-slider"></span>
                 </label>
+                <span class="diet-icon non-veg" title="Non-Veg Only"></span>
+                <span class="diet-icon all" title="Show All"></span>
             </div>
             <button class="mobile-search-btn">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -120,7 +134,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUN MASKA & CHAI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUN MASKA & CHAI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -137,7 +151,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN GARLIC BUN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN GARLIC BUN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -154,7 +168,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VADA PITA -SLIDER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VADA PITA -SLIDER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -171,7 +185,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GHEE ROAST CORN & PANEER BHURJI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GHEE ROAST CORN & PANEER BHURJI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -188,7 +202,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AMRITSARI KULCHA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AMRITSARI KULCHA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -205,7 +219,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOADED SMOOTHIE BOWLS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOADED SMOOTHIE BOWLS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -222,7 +236,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC BELGIAN WAFFLES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1504669521191-4475510f2791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC BELGIAN WAFFLES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -239,7 +253,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC PAN CAKES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC PAN CAKES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -256,7 +270,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blueberry" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blueberry" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -273,7 +287,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Choco-Chip" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Choco-Chip" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -290,7 +304,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KEEMA GHOTALA WITH MASKA PAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KEEMA GHOTALA WITH MASKA PAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -311,10 +325,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANDA BHURJI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANDA BHURJI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon veg"></span>
+                        <span class="diet-icon non-veg"></span>
                         <h4 class="item-name">ANDA BHURJI</h4>
                     </div>
                     <div class="item-price-row">
@@ -328,7 +342,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SUNNY SIDE UP/ BULL'S EYE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SUNNY SIDE UP/ BULL'S EYE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -345,7 +359,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE SCRAMBLED EGGS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE SCRAMBLED EGGS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -366,10 +380,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="All omelettes are served with buttered toast & potato wedges" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="All omelettes are served with buttered toast & potato wedges" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon non-veg"></span>
+                        <span class="diet-icon veg"></span>
                         <h4 class="item-name">All omelettes are served with buttered toast & potato wedges</h4>
                     </div>
                     <div class="item-price-row">
@@ -383,7 +397,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TURKISH EGG  (250g/322kcal)" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TURKISH EGG  (250g/322kcal)" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -400,7 +414,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SRILANKAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SRILANKAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -417,7 +431,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ITALIAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ITALIAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -434,10 +448,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHAKSHUKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHAKSHUKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon veg"></span>
+                        <span class="diet-icon non-veg"></span>
                         <h4 class="item-name">SHAKSHUKA</h4>
                     </div>
                     <div class="item-price-row">
@@ -451,7 +465,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AFRICAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AFRICAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -468,7 +482,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JHAKAAS DESI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JHAKAAS DESI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -485,10 +499,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALI PER EDU" class="item-img">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALI PER EDU" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon veg"></span>
+                        <span class="diet-icon non-veg"></span>
                         <h4 class="item-name">SALI PER EDU</h4>
                     </div>
                     <div class="item-price-row">
@@ -506,7 +520,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SOUP DU JOUR" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SOUP DU JOUR" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -523,7 +537,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN THUKPA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN THUKPA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -540,7 +554,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MANCHOW SOUP" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MANCHOW SOUP" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -557,7 +571,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI PANEER/CHICKEN CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI PANEER/CHICKEN CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -574,7 +588,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIG & GRANNY APPLE WALDORF SALAD" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIG & GRANNY APPLE WALDORF SALAD" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -591,7 +605,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WATERMELON WALNUT FETA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WATERMELON WALNUT FETA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -608,7 +622,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED BEETROOT ORANGE SALAD" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED BEETROOT ORANGE SALAD" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -625,7 +639,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CARDINI CAESAR SALAD" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CARDINI CAESAR SALAD" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -646,7 +660,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI CHINESE BHEL PAPDI CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI CHINESE BHEL PAPDI CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -663,7 +677,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NATRAAJ KI ALOO TIKKI CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NATRAAJ KI ALOO TIKKI CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -680,7 +694,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSA CHOLE CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSA CHOLE CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -697,7 +711,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY PALAK PATTA CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY PALAK PATTA CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -714,7 +728,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI PAPDI, ALOO CHAAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI PAPDI, ALOO CHAAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -735,7 +749,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE & SPINACH DIP" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE & SPINACH DIP" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -752,7 +766,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BABA GANOUSH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BABA GANOUSH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -769,7 +783,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HUMMUS BOWL" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HUMMUS BOWL" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -786,7 +800,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ZA'ATAR SPICED MUSHROOM & LABNEH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ZA'ATAR SPICED MUSHROOM & LABNEH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -803,7 +817,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUHAMMARA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1626200412850-7f282434f0e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUHAMMARA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -824,7 +838,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SKILLET POUTINE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SKILLET POUTINE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -841,7 +855,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Classic" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Classic" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -858,7 +872,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Peri Peri" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Peri Peri" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -875,7 +889,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI CHEESE DRAGON CIGAR VEG/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI CHEESE DRAGON CIGAR VEG/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -892,7 +906,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALT 'N' PEPPER CORNTINI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALT 'N' PEPPER CORNTINI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -909,7 +923,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLY LOTUS STEMS WITH FRIES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLY LOTUS STEMS WITH FRIES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -926,7 +940,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SCHEZWAN TOSSED CRISPY MUSHROOM & BABY CORN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SCHEZWAN TOSSED CRISPY MUSHROOM & BABY CORN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -943,7 +957,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED FALAFEL" class="item-img">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED FALAFEL" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -960,7 +974,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AVOCADO CRISPY TOAST" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AVOCADO CRISPY TOAST" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -977,7 +991,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLI WATER CHESTNUTS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLI WATER CHESTNUTS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -994,7 +1008,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED BRUSCHETTAS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED BRUSCHETTAS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1011,7 +1025,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JALAPENOS HUSH PUPPIES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JALAPENOS HUSH PUPPIES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1028,7 +1042,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MASALEDAR NIMBU MIRCH PANEER TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MASALEDAR NIMBU MIRCH PANEER TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1045,7 +1059,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL NACHOS GRANDE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL NACHOS GRANDE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1062,7 +1076,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HARA BHARA RICOTTA KEBAB" class="item-img">
+                <img src="https://images.unsplash.com/photo-1600891964092-4b16e442ce65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HARA BHARA RICOTTA KEBAB" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1079,7 +1093,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLE / CHICKEN MANCHURIAN POPS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLE / CHICKEN MANCHURIAN POPS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1096,7 +1110,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI KE KEBABS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI KE KEBABS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1113,7 +1127,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ACHARI PANEER / CHICKEN TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ACHARI PANEER / CHICKEN TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1130,7 +1144,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DRUMS OF HEAVEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DRUMS OF HEAVEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1147,7 +1161,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY TERIYAKI CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY TERIYAKI CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1164,7 +1178,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANGRA CHILLI PANEER/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANGRA CHILLI PANEER/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1181,7 +1195,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA FRIED CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA FRIED CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1198,7 +1212,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY CHICKEN WINGS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY CHICKEN WINGS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1215,7 +1229,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GUNPOWDER CHICKEN HUMMUS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GUNPOWDER CHICKEN HUMMUS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1232,7 +1246,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1249,7 +1263,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HIMALYAN SPICED CHICKEN TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HIMALYAN SPICED CHICKEN TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1266,7 +1280,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHISH TAOUK" class="item-img">
+                <img src="https://images.unsplash.com/photo-1626200412850-7f282434f0e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHISH TAOUK" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1283,7 +1297,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BHATTI KA MURG" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BHATTI KA MURG" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1300,7 +1314,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANGAAR CHICKEN TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANGAAR CHICKEN TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1317,7 +1331,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NAAN SENSE SEEKH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NAAN SENSE SEEKH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1334,7 +1348,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PURANI DILLI CHICKEN TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PURANI DILLI CHICKEN TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1351,7 +1365,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOROCCON KEFTA WITH LEBNEH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOROCCON KEFTA WITH LEBNEH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1368,7 +1382,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK PEPPER BUTTER GARLIC PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK PEPPER BUTTER GARLIC PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1385,7 +1399,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WOK TOSSED BIRD EYE CHILLI FISH / PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WOK TOSSED BIRD EYE CHILLI FISH / PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1406,7 +1420,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEDITERRANEAN MEZZE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEDITERRANEAN MEZZE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1423,7 +1437,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED PLATTER VEG/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED PLATTER VEG/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1440,7 +1454,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICED HUMMUS AWARMA PANEER/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICED HUMMUS AWARMA PANEER/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1457,7 +1471,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE KEBAB" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE KEBAB" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1474,7 +1488,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OTTOMAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OTTOMAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1495,7 +1509,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSALICIOUS CHESSE BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSALICIOUS CHESSE BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1512,10 +1526,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG VEGGIE ALOOLICIOUS BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG VEGGIE ALOOLICIOUS BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon non-veg"></span>
+                        <span class="diet-icon veg"></span>
                         <h4 class="item-name">OG VEGGIE ALOOLICIOUS BURGER</h4>
                     </div>
                     <div class="item-price-row">
@@ -1529,7 +1543,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI PANEER TIKKA BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI PANEER TIKKA BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1546,7 +1560,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HOLY GUACAMOLE BLACK BEAN BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HOLY GUACAMOLE BLACK BEAN BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1563,7 +1577,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG GRILLED CHICKEN BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG GRILLED CHICKEN BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1580,7 +1594,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY CHICKEN & CHEESE MELT BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY CHICKEN & CHEESE MELT BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1597,7 +1611,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ULTIMATE BOSS FRIED CHICKEN BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ULTIMATE BOSS FRIED CHICKEN BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1614,7 +1628,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS CHICKEN TIKKA BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS CHICKEN TIKKA BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1631,7 +1645,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN BURGER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN BURGER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1652,7 +1666,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THE BMT {MOCHA CLASSIC}" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THE BMT {MOCHA CLASSIC}" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1669,7 +1683,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GARDEN FRESH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GARDEN FRESH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1686,7 +1700,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CAJUN SPICED COTTAGE CHEESE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CAJUN SPICED COTTAGE CHEESE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1703,7 +1717,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PESTO CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PESTO CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1720,7 +1734,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROAST CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROAST CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1737,7 +1751,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1754,7 +1768,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED TIKKA SANDWICH PANEER / CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED TIKKA SANDWICH PANEER / CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1775,7 +1789,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY AVOCADO SUSHI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY AVOCADO SUSHI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1792,7 +1806,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY MUSHROOM AND CHEESE SUSHI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY MUSHROOM AND CHEESE SUSHI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1809,7 +1823,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN KATSU CALIFORNIA ROLL SUSHI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN KATSU CALIFORNIA ROLL SUSHI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1826,7 +1840,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PRAWNS TEMPURA TERIYAKI SUSHI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PRAWNS TEMPURA TERIYAKI SUSHI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1843,7 +1857,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM & PEPPER BAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM & PEPPER BAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1860,7 +1874,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIRE CRACKER COTTAGE CHEESE BAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIRE CRACKER COTTAGE CHEESE BAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1877,7 +1891,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TERIYAKI CHICKEN BAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TERIYAKI CHICKEN BAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1894,7 +1908,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED SAMBAL CHICKEN BAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED SAMBAL CHICKEN BAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1911,7 +1925,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE OIL & VEGETABLE DIMSUM" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE OIL & VEGETABLE DIMSUM" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1928,7 +1942,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN & CREAM CHEESE DIMSUM" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN & CREAM CHEESE DIMSUM" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -1945,7 +1959,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN CORIANDER DIMSUM" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN CORIANDER DIMSUM" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1962,7 +1976,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN STYLE STEAMED MOMOS VEG / CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN STYLE STEAMED MOMOS VEG / CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1979,7 +1993,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER CHILLI GARLIC MOMOS VEG / CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER CHILLI GARLIC MOMOS VEG / CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -1996,7 +2010,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI MOMOS VEG / NON VEG" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI MOMOS VEG / NON VEG" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2017,7 +2031,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE MARGHERITA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE MARGHERITA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2034,7 +2048,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FARM FRESH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FARM FRESH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2051,7 +2065,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED GARLIC MUSHROOM & THREE CHILLI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED GARLIC MUSHROOM & THREE CHILLI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2068,7 +2082,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BLACK OLIVES, MUSHROOM AND CORN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BLACK OLIVES, MUSHROOM AND CORN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2085,7 +2099,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BROCCOLI & SPINACH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BROCCOLI & SPINACH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2102,7 +2116,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & FETA CHEESE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & FETA CHEESE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2119,7 +2133,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2136,10 +2150,10 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEATZAA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEATZAA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
-                        <span class="diet-icon non-veg"></span>
+                        <span class="diet-icon veg"></span>
                         <h4 class="item-name">MEATZAA</h4>
                     </div>
                     <div class="item-price-row">
@@ -2153,7 +2167,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER/ CHICKEN TIKKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER/ CHICKEN TIKKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2170,7 +2184,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BBQ CHICKEN & CHARRED ONION" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BBQ CHICKEN & CHARRED ONION" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2187,7 +2201,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG SMOKED CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG SMOKED CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2208,7 +2222,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHIPOTLE & CHEESE STEAK" class="item-img">
+                <img src="https://images.unsplash.com/photo-1600891964092-4b16e442ce65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHIPOTLE & CHEESE STEAK" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2225,7 +2239,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="COTTAGE CHEESE MEDALLIONS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="COTTAGE CHEESE MEDALLIONS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2242,7 +2256,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MAKHANI SHASHLIK VEG/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MAKHANI SHASHLIK VEG/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2259,7 +2273,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2276,7 +2290,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ORIENTAL VEG / CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ORIENTAL VEG / CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2293,7 +2307,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TEX-MEX GRILLED CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TEX-MEX GRILLED CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2310,7 +2324,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2331,7 +2345,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM SPAGHETTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM SPAGHETTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2348,7 +2362,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK SAUCE PENNE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK SAUCE PENNE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2365,7 +2379,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ALL AMERICAN MAC & CHEESE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ALL AMERICAN MAC & CHEESE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2382,7 +2396,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS STYLE SPAGHETTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS STYLE SPAGHETTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2399,7 +2413,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPAGHETTI AGLIO OLIO PEPPEROCINO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1504669521191-4475510f2791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPAGHETTI AGLIO OLIO PEPPEROCINO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2416,7 +2430,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CREATE YOUR OWN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1626200412850-7f282434f0e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CREATE YOUR OWN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2437,7 +2451,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN, SPINACH & BROCCOLI GRATIN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN, SPINACH & BROCCOLI GRATIN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2454,7 +2468,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHERMOULA COTTAGE CHEESE STEAKS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHERMOULA COTTAGE CHEESE STEAKS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2471,7 +2485,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED EXOTIC VEGETABLES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED EXOTIC VEGETABLES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2488,7 +2502,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HERBED MARINATED GRILLED CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HERBED MARINATED GRILLED CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2505,7 +2519,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL FISH & CHIPS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL FISH & CHIPS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2522,7 +2536,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED FISH WITH LEMON CAPER SAUCE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED FISH WITH LEMON CAPER SAUCE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2539,7 +2553,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURMESE KHAO SUEY" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURMESE KHAO SUEY" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2556,7 +2570,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASIAN GREENS IN CHILLY SESAME SAUCE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASIAN GREENS IN CHILLY SESAME SAUCE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2573,7 +2587,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLES / CHICKEN MANCHURIAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLES / CHICKEN MANCHURIAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2590,7 +2604,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI GREEN CURRY VEG/CHICKEN/PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI GREEN CURRY VEG/CHICKEN/PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2607,7 +2621,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRIPLE SCHEZWAN RICE VEG/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRIPLE SCHEZWAN RICE VEG/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2624,7 +2638,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BRAISED CHICKEN IN SMOKED CHILLI SAUCE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BRAISED CHICKEN IN SMOKED CHILLI SAUCE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2641,7 +2655,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KUNG PAO CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KUNG PAO CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2658,7 +2672,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMBAL OELEK STEAK" class="item-img">
+                <img src="https://images.unsplash.com/photo-1600891964092-4b16e442ce65?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMBAL OELEK STEAK" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2675,7 +2689,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN VEG/CHICKEN RAMEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN VEG/CHICKEN RAMEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2692,7 +2706,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHINA BOX VEG/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHINA BOX VEG/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2709,7 +2723,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KIMCHI FRIED RICE BOWL VEG/ CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KIMCHI FRIED RICE BOWL VEG/ CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2726,7 +2740,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DANDAN NOODLES BOWL VEG/ CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DANDAN NOODLES BOWL VEG/ CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2743,7 +2757,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HAKKA NOODLES VEG/CHICKEN/PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HAKKA NOODLES VEG/CHICKEN/PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2760,7 +2774,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2777,7 +2791,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PEPPER GARLIC FRIED NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PEPPER GARLIC FRIED NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2794,7 +2808,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI STICKY RICE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI STICKY RICE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2811,7 +2825,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURNT GARLIC FRIED RICE/ NOODLES VEG/CHICKEN/PRAWNS  - 275/295/" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURNT GARLIC FRIED RICE/ NOODLES VEG/CHICKEN/PRAWNS  - 275/295/" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2828,7 +2842,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY SPINACH FRIED RICE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY SPINACH FRIED RICE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2845,7 +2859,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & GARLIC TEMPERED PUNJABI DAL TADKA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & GARLIC TEMPERED PUNJABI DAL TADKA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2862,7 +2876,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="RICOTTA CHEESE KOFTA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="RICOTTA CHEESE KOFTA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2879,7 +2893,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MULTIGRAIN KHICHDI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MULTIGRAIN KHICHDI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2896,7 +2910,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAL MAKHANI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAL MAKHANI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2913,7 +2927,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED TAWA VEGETABLE MASALA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED TAWA VEGETABLE MASALA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2930,7 +2944,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BEBU AUNTY'S DUM ALOO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BEBU AUNTY'S DUM ALOO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2947,7 +2961,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSHROOM CORN HARA PAYAZ MASALA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSHROOM CORN HARA PAYAZ MASALA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2964,7 +2978,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MARTABANI CHOLE / PANEER" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565299524944-cb19c679261a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MARTABANI CHOLE / PANEER" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -2981,7 +2995,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED MAKHANI PANEER/CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED MAKHANI PANEER/CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -2998,7 +3012,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER / CHICKEN TIKKA BUTTER MASALA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER / CHICKEN TIKKA BUTTER MASALA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3015,7 +3029,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LAHORI CHATKARA TAWA CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LAHORI CHATKARA TAWA CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3032,7 +3046,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MATKA CHICKEN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MATKA CHICKEN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3049,7 +3063,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHADE MASALE KA BHUNA MURG" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHADE MASALE KA BHUNA MURG" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3066,7 +3080,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHEF DOGRA'S PAHARI MEAT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHEF DOGRA'S PAHARI MEAT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3083,7 +3097,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUTTON ROGAN JOSH" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUTTON ROGAN JOSH" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3100,7 +3114,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROTI PE GHEE ROAST BOTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1504669521191-4475510f2791?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROTI PE GHEE ROAST BOTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3117,7 +3131,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSTARD FISH CURRY" class="item-img">
+                <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSTARD FISH CURRY" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3134,7 +3148,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MURG RARA MASALA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MURG RARA MASALA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3151,7 +3165,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CHICKEN BARRA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CHICKEN BARRA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3168,7 +3182,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DUM BIRYANI - VEG/ CHICKEN/GOSHT" class="item-img">
+                <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DUM BIRYANI - VEG/ CHICKEN/GOSHT" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon non-veg"></span>
@@ -3189,7 +3203,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER TANDOORI ROTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1579871494447-0811cf80d49d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER TANDOORI ROTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3206,7 +3220,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PAO" class="item-img">
+                <img src="https://images.unsplash.com/photo-1482049149308-0bb6ba51c6ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PAO" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3223,7 +3237,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CANAI ROTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1528137871618-79d2761e3fd5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CANAI ROTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3240,7 +3254,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KULCHA MASALA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KULCHA MASALA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3257,7 +3271,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER / GARLIC NAAN" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER / GARLIC NAAN" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3274,7 +3288,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN/PUDINA /MIRCHI LACHHA PARATHA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN/PUDINA /MIRCHI LACHHA PARATHA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3291,7 +3305,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHAMIRI ROTI" class="item-img">
+                <img src="https://images.unsplash.com/photo-1576107232684-1279f390859f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHAMIRI ROTI" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3308,7 +3322,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC CHEESE NAAN/ STEAMED /JEERA RICE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1512058564366-18510fd2b15e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC CHEESE NAAN/ STEAMED /JEERA RICE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3325,7 +3339,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURANI RAITA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURANI RAITA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3346,7 +3360,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA LAVA-LAVA" class="item-img">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA LAVA-LAVA" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3363,7 +3377,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SEA SALT CARAMEL CAKE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SEA SALT CARAMEL CAKE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3380,7 +3394,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SIZZLING BROWNIE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SIZZLING BROWNIE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3397,7 +3411,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRES LECHES" class="item-img">
+                <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRES LECHES" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3414,7 +3428,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOTUS BISCOFF CHEESECAKE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOTUS BISCOFF CHEESECAKE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>
@@ -3431,7 +3445,7 @@
 
         <div class="menu-item">
             <div class="item-top">
-                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHOCOLATE AVALANCHE" class="item-img">
+                <img src="https://images.unsplash.com/photo-1490818387583-1b5ba260772c?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHOCOLATE AVALANCHE" class="item-img">
                 <div class="item-info">
                     <div class="item-title-row">
                         <span class="diet-icon veg"></span>

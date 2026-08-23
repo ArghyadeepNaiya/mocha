@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2378350f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3'/></svg>">
 </head>
 <body>
     <!-- Mobile Location Bar (Hidden on Desktop) -->
@@ -43,7 +44,7 @@
             </div>
 
             <!-- Desktop Search and Toggle (Hidden on Mobile) -->
-            <div class="desktop-controls desktop-only">
+            <div class="search-container desktop-only">
                 <div class="search-bar">
                     <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -51,13 +52,18 @@
                     </svg>
                     <input type="text" placeholder="Search for items..." class="search-input">
                 </div>
-                
+            </div>
+
+            <div class="desktop-controls desktop-only">
+
                 <div class="veg-toggle-container">
-                    <span class="veg-label">Veg only</span>
+                    <span class="diet-icon veg" title="Veg Only"></span>
                     <label class="toggle-switch">
                         <input type="checkbox">
                         <span class="toggle-slider"></span>
                     </label>
+                    <span class="diet-icon non-veg" title="Non-Veg Only"></span>
+                    <span class="diet-icon all" title="Show All"></span>
                 </div>
             </div>
 
@@ -172,16 +178,17 @@
                     <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                     </svg>
-                    <span>Narsingi, Hyderabad, .</span>
+                    <span>Ranchi.</span>
                 </div>
-                <div class="footer-item">
+                <!-- <div class="footer-item">
                     <svg class="icon document-icon" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
                     </svg>
                     <span>GSTIN - 36AAHCN5928J1Z1</span>
-                </div>
+                </div> -->
             </div>
         </div>
     </footer>
+    <script src="menu.js"></script>
 </body>
 </html>

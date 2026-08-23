@@ -164,37 +164,8 @@
     gap: 8px;
 }
 
-.diet-icon {
-    width: 12px;
-    height: 12px;
-    border: 1px solid;
-    border-radius: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+.item-title-row .diet-icon {
     margin-top: 4px;
-}
-
-.diet-icon::after {
-    content: '';
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-}
-
-.diet-icon.veg {
-    border-color: #2e7d32;
-}
-.diet-icon.veg::after {
-    background-color: #2e7d32;
-}
-
-.diet-icon.non-veg {
-    border-color: #c62828;
-}
-.diet-icon.non-veg::after {
-    background-color: #c62828;
 }
 
 .item-name {

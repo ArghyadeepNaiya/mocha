@@ -60,6 +60,15 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    position: relative;
+}
+
+.search-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 380px;
 }
 
 .brand-section {
@@ -182,7 +191,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #cbd5e1;
+    background-color: #2e7d32; /* Green for veg */
     transition: .3s;
     border-radius: 34px;
 }
@@ -201,11 +210,54 @@ body {
 }
 
 input:checked + .toggle-slider {
-    background-color: #10b981; /* Green for veg */
+    background-color: #c62828; /* Red for non-veg */
 }
 
 input:checked + .toggle-slider:before {
     transform: translateX(16px);
+}
+
+input:indeterminate + .toggle-slider {
+    background-color: #cbd5e1; /* Gray for all */
+}
+
+input:indeterminate + .toggle-slider:before {
+    transform: translateX(8px);
+}
+
+/* Diet Icons */
+.diet-icon {
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.diet-icon.veg::after {
+    content: '🥦';
+}
+
+.diet-icon.non-veg::after {
+    content: '🍗';
+}
+
+.diet-icon.all {
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0.5;
+    transition: 0.2s;
+}
+
+.diet-icon.all:hover, .diet-icon.all.active {
+    opacity: 1;
+}
+
+.diet-icon.all::after {
+    content: '🍽️';
 }
 
 /* Button */
@@ -320,8 +372,8 @@ input:checked + .toggle-slider:before {
 
 .menu-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4em;
 }
 
 .menu-card {
