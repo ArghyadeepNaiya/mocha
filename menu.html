@@ -1,0 +1,3455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Mocha Bar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <header class="main-header desktop-only-header">
+        <div class="header-container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Mocha Bar Logo" class="logo-img">
+                </a>
+                <div class="logo-text">
+                    <h1>Mocha Bar</h1>
+                </div>
+            </div>
+            
+            <div class="search-bar">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" placeholder="Search for items...">
+            </div>
+            
+            <div class="veg-toggle">
+                <span>Veg only</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </header>
+
+    <header class="mobile-menu-header mobile-only">
+        <div class="mobile-header-top">
+            <a href="index.html" class="back-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+            </a>
+            <div class="veg-toggle">
+                <span>Veg only</span>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+            <button class="mobile-search-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="mobile-category-scroll">
+            <a href="#all-day-breakfast" class="cat-pill active">All Day Breakfast</a>
+            <a href="#egg-citing-choices" class="cat-pill">Egg-Citing Choices</a>
+            <a href="#world-omelettes" class="cat-pill">World Omelettes</a>
+            <a href="#soups-and-salads" class="cat-pill">Soups & Salads</a>
+            <a href="#purani-dilli-ki-chaat" class="cat-pill">Purani Dilli Ki Chaat</a>
+            <a href="#mocha-mezze-and-dips" class="cat-pill">Mocha Mezze & Dips</a>
+            <a href="#appetizers" class="cat-pill">Appetizers</a>
+            <a href="#sharing-platter" class="cat-pill">Sharing Platter</a>
+            <a href="#burgers" class="cat-pill">Burgers</a>
+            <a href="#panini-and-whiches" class="cat-pill">Panini & Whiches</a>
+            <a href="#sushi-dimsum-and-baos" class="cat-pill">Sushi Dimsum & Baos</a>
+            <a href="#pizza" class="cat-pill">Pizza</a>
+            <a href="#mocha-sizzlers" class="cat-pill">Mocha Sizzlers</a>
+            <a href="#pastas" class="cat-pill">Pastas</a>
+            <a href="#mocha-mains" class="cat-pill">Mocha Mains</a>
+            <a href="#bread" class="cat-pill">Bread</a>
+            <a href="#desserts" class="cat-pill">Desserts</a>
+        </div>
+    </header>
+
+    <div class="menu-layout">
+        <aside class="menu-sidebar desktop-only">
+            <a href="index.html" class="back-link">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+                </svg>
+                BACK TO HOME
+            </a>
+            
+            <h3 class="sidebar-title">Menu</h3>
+            <ul class="sidebar-categories">
+                <li><a href="#all-day-breakfast" class="active">All Day Breakfast</a></li>
+                <li><a href="#egg-citing-choices">Egg-Citing Choices</a></li>
+                <li><a href="#world-omelettes">World Omelettes</a></li>
+                <li><a href="#soups-and-salads">Soups & Salads</a></li>
+                <li><a href="#purani-dilli-ki-chaat">Purani Dilli Ki Chaat</a></li>
+                <li><a href="#mocha-mezze-and-dips">Mocha Mezze & Dips</a></li>
+                <li><a href="#appetizers">Appetizers</a></li>
+                <li><a href="#sharing-platter">Sharing Platter</a></li>
+                <li><a href="#burgers">Burgers</a></li>
+                <li><a href="#panini-and-whiches">Panini & Whiches</a></li>
+                <li><a href="#sushi-dimsum-and-baos">Sushi Dimsum & Baos</a></li>
+                <li><a href="#pizza">Pizza</a></li>
+                <li><a href="#mocha-sizzlers">Mocha Sizzlers</a></li>
+                <li><a href="#pastas">Pastas</a></li>
+                <li><a href="#mocha-mains">Mocha Mains</a></li>
+                <li><a href="#bread">Bread</a></li>
+                <li><a href="#desserts">Desserts</a></li>
+            </ul>
+        </aside>
+
+        <main class="menu-main-content">
+<div class="menu-sections-container">
+<div id="all-day-breakfast" class="category-section">
+<h2 class="category-title">ALL DAY BREAKFAST</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUN MASKA & CHAI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BUN MASKA & CHAI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹95</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mumbai's breakfast on the go. Hot oven fresh buttered sweet bun served with our masala chai "cutting"</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN GARLIC BUN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">KOREAN GARLIC BUN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹245</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Pull apart Korean style bun filled with cream cheese & garlic bread</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VADA PITA -SLIDER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">VADA PITA -SLIDER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹195</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Freshly baked pita stuffed with spicy Ghati masala aloo & served with chiili</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GHEE ROAST CORN & PANEER BHURJI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">GHEE ROAST CORN & PANEER BHURJI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Indian spiced & rich delicacy, adopted & recurated, served with pao</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AMRITSARI KULCHA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">AMRITSARI KULCHA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Amritsari chole, stuffed kulcha, aam ka achar, dahi, makhan</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOADED SMOOTHIE BOWLS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">LOADED SMOOTHIE BOWLS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fresh yogurt blueberry/ mixed berry topped with granola, kiwi, banana, pomegranate and pistachio</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC BELGIAN WAFFLES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CLASSIC BELGIAN WAFFLES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Freshly toasted waffles served with butter, maple syrup & fresh fruits</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CLASSIC PAN CAKES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CLASSIC PAN CAKES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy stacks of freshly baked pancakes served with maple syrup</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Blueberry" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">Blueberry</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹75</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Choco-Chip" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">Choco-Chip</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹60</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KEEMA GHOTALA WITH MASKA PAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KEEMA GHOTALA WITH MASKA PAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Lamb mince in traditional Indian spices cooked on a heavy griddle, topped with eggs & served with traditional Mumbai buttered pao</p>
+        </div>
+</div></div>
+<div id="egg-citing-choices" class="category-section">
+<h2 class="category-title">EGG-CITING CHOICES</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANDA BHURJI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ANDA BHURJI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Scrambled egg with onions, tomatoes, green chillies, coriander & homemade spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SUNNY SIDE UP/ BULL'S EYE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SUNNY SIDE UP/ BULL'S EYE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹195</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fried eggs with yolk up & crispy, golden-brown edge</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE SCRAMBLED EGGS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TRUFFLE SCRAMBLED EGGS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Eggs cooked in truffle oil & english cheddar cheese with a hint of fresh herbs and served with multigrain toasts.</p>
+        </div>
+</div></div>
+<div id="world-omelettes" class="category-section">
+<h2 class="category-title">WORLD OMELETTES</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="All omelettes are served with buttered toast & potato wedges" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">All omelettes are served with buttered toast & potato wedges</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹...</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TURKISH EGG  (250g/322kcal)" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TURKISH EGG  (250g/322kcal)</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Poached eggs served on a bed of garlic Greek yogurt with parsley, topped with chilli butter cherry tomato & served with butter bread</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SRILANKAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SRILANKAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">An open-faced omelette made with red onions, chilies & curry leaves</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ITALIAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ITALIAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A crescent folded omelette stuffed with chicken sausages & white onions</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHAKSHUKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SHAKSHUKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Eggs simmered in tomato, capsicum, onion based Arabic spiced sauce with pita bread</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AFRICAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">AFRICAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">An open-faced omelette with spicy lamb mince</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JHAKAAS DESI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">JHAKAAS DESI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Sharmaji inspired desi style omelette</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALI PER EDU" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SALI PER EDU</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Traditional Zoroastrian breakfast fare. Eggs over potato crisps or slices</p>
+        </div>
+</div></div>
+<div id="soups-and-salads" class="category-section">
+<h2 class="category-title">SOUPS & SALADS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SOUP DU JOUR" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SOUP DU JOUR</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹175</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Ask your server about today's soup of the day</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN THUKPA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">TIBETAN THUKPA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Aromatic Tibetan noodle broth finished with chilli oil spiced with Szechwan pepper from the Himalayan foothills</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MANCHOW SOUP" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MANCHOW SOUP</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹175</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Indo-Chinese thick spicy soup made with mixed vegetables garlic, ginger,soya sauce & ground pepper</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI PANEER/CHICKEN CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TANDOORI PANEER/CHICKEN CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹285</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Healthy version of tandoori paneer/chicken in a chaat</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIG & GRANNY APPLE WALDORF SALAD" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">FIG & GRANNY APPLE WALDORF SALAD</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mixed greens, celery, figs, walnuts, & mixed with yogurt mayo dressing</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WATERMELON WALNUT FETA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">WATERMELON WALNUT FETA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Refreshing salad with watermelon with walnut & feta</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED BEETROOT ORANGE SALAD" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ROASTED BEETROOT ORANGE SALAD</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fresh Cream & buttery cheese served on a bed of green leaves with oven-roasted beetroot and orange in a balsamic glaze served with a slice of house baked toast</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CARDINI CAESAR SALAD" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SMOKED CARDINI CAESAR SALAD</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Assorted lettuce, shaved parmesan & Caesar dressing</p>
+        </div>
+</div></div>
+<div id="purani-dilli-ki-chaat" class="category-section">
+<h2 class="category-title">PURANI DILLI KI CHAAT</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI CHINESE BHEL PAPDI CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DESI CHINESE BHEL PAPDI CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A unique adaptation of Chinese recipe to the Indian street food</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NATRAAJ KI ALOO TIKKI CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">NATRAAJ KI ALOO TIKKI CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crisp potato patties & chana masala topped with sweet yogurt, chutney, sev, hot and tangy chaat spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSA CHOLE CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SAMOSA CHOLE CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A unique combination with homemade crisp samosas served with chole, saunth & mint chutney</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY PALAK PATTA CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CRISPY PALAK PATTA CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy fried spinach leafs topped with sweet curd, tamarind glaze, chutney, aloo bhujia, pomegranate pearls and sprinkled with chef special chaat masala</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI PAPDI, ALOO CHAAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DAHI PAPDI, ALOO CHAAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy papdi combined with masala chickpeas & aloo, sweetened curd, chutneys topped with beet Julians & pearls pomegranate</p>
+        </div>
+</div></div>
+<div id="mocha-mezze-and-dips" class="category-section">
+<h2 class="category-title">MOCHA MEZZE & DIPS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE & SPINACH DIP" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">THREE CHEESE & SPINACH DIP</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spinach cooked in three types of cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BABA GANOUSH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BABA GANOUSH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Grilled eggplant, tomatoes, shallot, lemon juice, olive oil and capsicum</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HUMMUS BOWL" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">HUMMUS BOWL</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chickpeas puree with tahini, paprika & pine nuts</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ZA'ATAR SPICED MUSHROOM & LABNEH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ZA'ATAR SPICED MUSHROOM & LABNEH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Olive oil tossed mushroom with hint of zaatar spice served over creamy labneh</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUHAMMARA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MUHAMMARA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Smoked bell pepper dip, roasted walnuts, garlic and olive oil</p>
+        </div>
+</div></div>
+<div id="appetizers" class="category-section">
+<h2 class="category-title">APPETIZERS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SKILLET POUTINE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SKILLET POUTINE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹...</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A French-Canadian concoction comprised of French fries & cheese sauce. It's gross, it's messy & it's delicious</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Classic" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">Classic</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Peri Peri" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">Peri Peri</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹245</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI CHEESE DRAGON CIGAR VEG/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHILLI CHEESE DRAGON CIGAR VEG/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹345</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spring roll sheets stuffed with cream cheese, green chilli, cottage cheese/chicken, capsicums, coriander & onions served with chipotle mayo</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SALT 'N' PEPPER CORNTINI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SALT 'N' PEPPER CORNTINI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹275</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy corn niblets tossed with chillies & onions</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLY LOTUS STEMS WITH FRIES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">HONEY CHILLY LOTUS STEMS WITH FRIES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Homemade fries & lotus stem tossed with honey chilli sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SCHEZWAN TOSSED CRISPY MUSHROOM & BABY CORN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SCHEZWAN TOSSED CRISPY MUSHROOM & BABY CORN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy fried mushroom & baby corn tossed in Schezwan sauce.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED FALAFEL" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ASSORTED FALAFEL</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Sesame-coated chickpeas, green peas, corn nibbles patty served with salad & dip</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="AVOCADO CRISPY TOAST" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">AVOCADO CRISPY TOAST</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Avocado mash, lettuce, cherry tomatoes, balsamic reduction & feta</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HONEY CHILLI WATER CHESTNUTS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">HONEY CHILLI WATER CHESTNUTS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy water chestnuts tossed with honey chilli sauce & hint of sesame oil</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED BRUSCHETTAS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ASSORTED BRUSCHETTAS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Toasted bread with assorted toppings onions zucchini with Cheddar, mushrooms with parmesan, sriracha tomatoes with mozzarella</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="JALAPENOS HUSH PUPPIES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">JALAPENOS HUSH PUPPIES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹345</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Panko coated juicy jalapenos filled with creamy cheese & deep fried. Served with sriracha chunda</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MASALEDAR NIMBU MIRCH PANEER TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MASALEDAR NIMBU MIRCH PANEER TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Marinated cottage cheese served with piquant onion & horseradish chutney</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL NACHOS GRANDE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">OLD SCHOOL NACHOS GRANDE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A good old Mexican recipe topped with jalapenos, sour cream & cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HARA BHARA RICOTTA KEBAB" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">HARA BHARA RICOTTA KEBAB</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Lucious & velvety vegetables hara bhara kebab shallow fried in desi ghee served with chutney</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLE / CHICKEN MANCHURIAN POPS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">VEGETABLE / CHICKEN MANCHURIAN POPS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Tender & flavorful veg/chicken balls tossed with soya chilli sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAHI KE KEBABS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DAHI KE KEBABS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Cottage cheese and hung curd medallions served with mint chutney</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ACHARI PANEER / CHICKEN TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ACHARI PANEER / CHICKEN TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chunks of paneer / chicken marinated with pickle & Indian spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DRUMS OF HEAVEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DRUMS OF HEAVEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy fried juicy chicken wings tossed with sweet & spicy chilli sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY TERIYAKI CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">SPICY TERIYAKI CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken tossed with celery, ginger, bird eye chilli & teriyaki sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANGRA CHILLI PANEER/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TANGRA CHILLI PANEER/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hot & spicy chilli panner/chicken come from the Hakka Chinese colony of east Calcutta</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA FRIED CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MOCHA FRIED CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Peri Peri marinated fried chicken pops</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY CHICKEN WINGS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">FIERY CHICKEN WINGS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken wings tossed with spicy sriracha sauce & served with sour cream</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GUNPOWDER CHICKEN HUMMUS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">GUNPOWDER CHICKEN HUMMUS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chickpea hummus topped with crispy chicken tossed in fiery podi masala.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KOREAN FRIED CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Crispy deep-fried chicken tossed in Korea gochujang chili sauce garnish with spring onion & sesame seed</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HIMALYAN SPICED CHICKEN TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">HIMALYAN SPICED CHICKEN TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Morsels of chicken marinated in a fiery mix of chef's secret spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SHISH TAOUK" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SHISH TAOUK</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken morsels marinated with yoghurt,spices & Cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BHATTI KA MURG" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BHATTI KA MURG</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Discover the taste of decadence. Juicy spring chicken marinated in exotic spiced yoghurt & completed to a crisp finish in the bhatti</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ANGAAR CHICKEN TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ANGAAR CHICKEN TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Morsels of chicken marinated in a fiery mix of chef's secret spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="NAAN SENSE SEEKH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">NAAN SENSE SEEKH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Ground mutton mince seekh infused with the flavors of Kashmir valley & served with naan</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PURANI DILLI CHICKEN TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PURANI DILLI CHICKEN TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Juicy chicken tikka tossed with smoked chilli butter & chef's special spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOROCCON KEFTA WITH LEBNEH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MOROCCON KEFTA WITH LEBNEH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹425</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken mince mixed kebab with garlic, parsley and a blend of Middle Easten Spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK PEPPER BUTTER GARLIC PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PINK PEPPER BUTTER GARLIC PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Prawns tossed with garlic butter pepper sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WOK TOSSED BIRD EYE CHILLI FISH / PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">WOK TOSSED BIRD EYE CHILLI FISH / PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹465</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fish / prawns splashed in olive oil & cooked with garlic & red chillies</p>
+        </div>
+</div></div>
+<div id="sharing-platter" class="category-section">
+<h2 class="category-title">SHARING PLATTER</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEDITERRANEAN MEZZE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MEDITERRANEAN MEZZE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Pita, falafel, fatayer, sambousek, feta, lavash, gherkins & olives served with tzatziki, mutabal & hummus</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED PLATTER VEG/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ASSORTED PLATTER VEG/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹545</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chef choice veg/chicken samplers</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICED HUMMUS AWARMA PANEER/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">SPICED HUMMUS AWARMA PANEER/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹450</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Roasted chickpeas hummus topped with spicy paneer/chicken served with manakeesh bread & pickled salad</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE KEBAB" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">LEBANESE KEBAB</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹595</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Shish taouk, harissa chicken, chicken seekh, pita, salad, hummus & tzatziki</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OTTOMAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">OTTOMAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹625</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Treat yourself to an extravaganza Ottoman feast fit for a Sultan!!</p>
+        </div>
+</div></div>
+<div id="burgers" class="category-section">
+<h2 class="category-title">BURGERS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMOSALICIOUS CHESSE BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SAMOSALICIOUS CHESSE BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chatpata smashed samosa,mint & imli chutney on a buttere'd toasted brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG VEGGIE ALOOLICIOUS BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">OG VEGGIE ALOOLICIOUS BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹249</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Taste the og flavourful aloo veggie patty with chapati, imli chutney and creamy mint mayo on a rich brioche bun that melts in the mouth</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DESI PANEER TIKKA BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DESI PANEER TIKKA BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A tandoori flavourbomb. Smoky paneer tikka with laccha veggie slate, creamy tandoori mint mayo on a utterly delicious brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HOLY GUACAMOLE BLACK BEAN BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">HOLY GUACAMOLE BLACK BEAN BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹289</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Holy boss of burgers. Texmex guac & black bean patty coupled with sharp garlic mayo, tangy tomato salsa, creamy guacamole & cheese on a melt in mouth brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG GRILLED CHICKEN BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">OG GRILLED CHICKEN BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">The OG mother clucker. Perfectly grilled chicken patty topped off with melted cheese, sharp garlic mayo, punchy hot sauce and our super secret seasoning between a melt in the mouth brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY CHICKEN & CHEESE MELT BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CRISPY CHICKEN & CHEESE MELT BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹355</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Relish this combination of panko crumbed chicken patty with super cheesy sauce, tangy hot sauce, lip smacking pickled gherkins and a cheese slice all between a melt in the mouth brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ULTIMATE BOSS FRIED CHICKEN BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ULTIMATE BOSS FRIED CHICKEN BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Frickin crispy chicken. Enjoy a patty of super duper crispy fried chicken with punchy garlic mayo and lip smacking pickled gherkins on a rich, soft brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS CHICKEN TIKKA BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BOSS CHICKEN TIKKA BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹329</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Smoky, tasty and chicken. Shredded chicken tikka complemented by crunchy veggie slar and flavorful tandoori mint mayo on a melt in the mouth brioche bun</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN FRIED CHICKEN BURGER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KOREAN FRIED CHICKEN BURGER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹359</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Saucy fried chicken patty in an asian glaze, cole slaw cheese, hot mango on a buttered toasted brioche bun</p>
+        </div>
+</div></div>
+<div id="panini-and-whiches" class="category-section">
+<h2 class="category-title">PANINI AND WHICHES</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THE BMT {MOCHA CLASSIC}" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">THE BMT {MOCHA CLASSIC}</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fresh black pepper, mozzarella, sliced tomatoes, fresh basil with olive oil, balsamic vinegar & served with a tangy salsa</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GARDEN FRESH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">GARDEN FRESH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mushrooms, jalapenos, onions & flavored herbs topped with mozzarella. Served with fresh basil pesto</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CAJUN SPICED COTTAGE CHEESE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CAJUN SPICED COTTAGE CHEESE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Cottage cheese, jalapenos, bell peppers, onions, flavored herbs topped with cheddar cheese & served with fresh basil pesto.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PESTO CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PESTO CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Pesto marinated grilled chicken topped with cheese & served with aioli</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROAST CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ROAST CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Apple wood fire roasted chicken with coleslaw & spicy mayo served with salsa</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LEBANESE CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">LEBANESE CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Lebanese style chicken served with hummus</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED TIKKA SANDWICH PANEER / CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">GRILLED TIKKA SANDWICH PANEER / CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Grilled sandwich served with individual stuffing</p>
+        </div>
+</div></div>
+<div id="sushi-dimsum-and-baos" class="category-section">
+<h2 class="category-title">SUSHI DIMSUM AND BAOS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPICY AVOCADO SUSHI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SPICY AVOCADO SUSHI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹485</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Avocado, jalapeno slice, togarashi spicy, spicy mayo, & micro greens</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIERY MUSHROOM AND CHEESE SUSHI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">FIERY MUSHROOM AND CHEESE SUSHI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹485</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Sushi rolled with a medley of mushroom and cream cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN KATSU CALIFORNIA ROLL SUSHI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHICKEN KATSU CALIFORNIA ROLL SUSHI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹525</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken katsu California rolls with cream cheese & homemade BBQ sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PRAWNS TEMPURA TERIYAKI SUSHI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PRAWNS TEMPURA TERIYAKI SUSHI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹595</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Tempura coated crispy prawn with spicy mayo and crispy tempura flakes</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM & PEPPER BAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">WILD MUSHROOM & PEPPER BAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Fried wild mushroom and peppers tossed with gochujang sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FIRE CRACKER COTTAGE CHEESE BAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">FIRE CRACKER COTTAGE CHEESE BAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Open faced bao filled with batter fried spicy cottage cheese & sriracha mayo</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TERIYAKI CHICKEN BAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TERIYAKI CHICKEN BAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Open faced bao filled with teriyaki chicken & micro greens</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED SAMBAL CHICKEN BAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">GRILLED SAMBAL CHICKEN BAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Translucent chicken marinated with sambal Oelek, soy, lemongrass</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRUFFLE OIL & VEGETABLE DIMSUM" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">TRUFFLE OIL & VEGETABLE DIMSUM</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Steamed dumpling filled with mixed vegetable and truffle oil</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN & CREAM CHEESE DIMSUM" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CORN & CREAM CHEESE DIMSUM</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Translucent dim sums stuffed with cream cheese & sweet corn</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHICKEN CORIANDER DIMSUM" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHICKEN CORIANDER DIMSUM</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹350</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Translucent dim sums filled with juicy chicken mince & fresh coriander steamed to perfection</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TIBETAN STYLE STEAMED MOMOS VEG / CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TIBETAN STYLE STEAMED MOMOS VEG / CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹210</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Classic steamed momos</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER CHILLI GARLIC MOMOS VEG / CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BUTTER CHILLI GARLIC MOMOS VEG / CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Momos tossed in butter garlic chilli sauce & served with chef's special sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI MOMOS VEG / NON VEG" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">TANDOORI MOMOS VEG / NON VEG</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹235</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Tandoori momos served with sharp chilli sauce</p>
+        </div>
+</div></div>
+<div id="pizza" class="category-section">
+<h2 class="category-title">PIZZA</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THREE CHEESE MARGHERITA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">THREE CHEESE MARGHERITA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Classic margherita with three cheese & basil leaves</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="FARM FRESH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">FARM FRESH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹435</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mushrooms, corns, assorted bell peppers, onions, black olives, jalapenos & cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROASTED GARLIC MUSHROOM & THREE CHILLI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ROASTED GARLIC MUSHROOM & THREE CHILLI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Roasted garlic mushroom, cheese, jalapenos, chipotle & green chili</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BLACK OLIVES, MUSHROOM AND CORN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BLACK OLIVES, MUSHROOM AND CORN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Wild mushroom, corn, olives, onions, fresh jalapenos, mozzarella cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BROCCOLI & SPINACH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BROCCOLI & SPINACH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Broccoli, spinach, corn, jalapeno, mozzarella & parmesan cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & FETA CHEESE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SPINACH & FETA CHEESE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spinach, feta cheese olives & sun-dried tomatoes</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PERI-PERI CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹465</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hot & spicy chicken topped with cheese, feta, red chillies, onions & capsicum</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MEATZAA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MEATZAA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹525</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mutton keema, mutton boti, chicken seekh, specially designed for meat lovers</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER/ CHICKEN TIKKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PANEER/ CHICKEN TIKKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹445</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Tandoori paneer/chicken tikka, tomatoes & onions with Indian flavored pizza sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BBQ CHICKEN & CHARRED ONION" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BBQ CHICKEN & CHARRED ONION</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹475</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Barbecue sauce marinated grilled chicken, onion, & Mozzarella cheese</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OG SMOKED CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">OG SMOKED CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹475</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Italian tomato sauce, mozzarella, onion, smoked Cajun chicken, jalapenos & black olives</p>
+        </div>
+</div></div>
+<div id="mocha-sizzlers" class="category-section">
+<h2 class="category-title">MOCHA SIZZLERS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHIPOTLE & CHEESE STEAK" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CHIPOTLE & CHEESE STEAK</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Exotic roasted vegetables & cheese medallion served with spicy chipotle creamy sauce & grilled vegetables</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="COTTAGE CHEESE MEDALLIONS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">COTTAGE CHEESE MEDALLIONS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Seasoned & crumbed cottage cheese accompanied with vegetables</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MAKHANI SHASHLIK VEG/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MAKHANI SHASHLIK VEG/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Cubes of cottage cheese/ chicken grilled with onions & capsicum</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PERI-PERI CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PERI-PERI CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹525</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken marinated with peri-peri sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ORIENTAL VEG / CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">ORIENTAL VEG / CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mixed vegetables / chicken dumpling served with grilled vegetables & soya chilli garlic sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TEX-MEX GRILLED CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TEX-MEX GRILLED CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹545</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Grilled chicken breast & sausages served in barbeque & strognoff sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TANDOORI CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TANDOORI CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹595</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hung curd marinated chicken roasted in tandoor for perfection & served with tawa pulao, mint chutney & raita</p>
+        </div>
+</div></div>
+<div id="pastas" class="category-section">
+<h2 class="category-title">PASTAS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="WILD MUSHROOM SPAGHETTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">WILD MUSHROOM SPAGHETTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Assorted mushrooms tossed in burnt garlic sauce over spaghetti.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PINK SAUCE PENNE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">PINK SAUCE PENNE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Penne pasta tossed in spicy creamy tomato sauce with exotic vegetables</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ALL AMERICAN MAC & CHEESE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ALL AMERICAN MAC & CHEESE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Macaroni tossed with corns, cheese sauce & topped with English cheddar & baked</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BOSS STYLE SPAGHETTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BOSS STYLE SPAGHETTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spaghetti tossed with spinach, onions, mushrooms & sundried tomatoes in butter, chilli herb garlic sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPAGHETTI AGLIO OLIO PEPPEROCINO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SPAGHETTI AGLIO OLIO PEPPEROCINO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spaghetti tossed with garlic, extra virgin olive oil and chilli flakes</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CREATE YOUR OWN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CREATE YOUR OWN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Choice of Pastas: Penne / Spaghetti / Fusilli. Choice of Gourmet Sauces: Spicy Arrabiata/ Cheesy Alfredo/ Pesto</p>
+        </div>
+</div></div>
+<div id="mocha-mains" class="category-section">
+<h2 class="category-title">MOCHA MAINS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CORN, SPINACH & BROCCOLI GRATIN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CORN, SPINACH & BROCCOLI GRATIN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Medley of corn, spinach and broccoli under a perfectly baked crust of cheese & crumbs</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHERMOULA COTTAGE CHEESE STEAKS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CHERMOULA COTTAGE CHEESE STEAKS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Our version with fresh cilantro and other herbs used as a marinade & served with sautéed veggies, chermoula sauce & paprika rice</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED EXOTIC VEGETABLES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">GRILLED EXOTIC VEGETABLES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Herbed olive & garlic marinated seasonal grilled vegetables served with cheddar & spinach mash</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HERBED MARINATED GRILLED CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">HERBED MARINATED GRILLED CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Grilled chicken with mashed potatoes & sautéed vegetables, served with creamy whole grain mustard / porcini mushroom sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="OLD SCHOOL FISH & CHIPS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">OLD SCHOOL FISH & CHIPS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹525</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Mocha's twist on British classic fish & chips served with tartar sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="GRILLED FISH WITH LEMON CAPER SAUCE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">GRILLED FISH WITH LEMON CAPER SAUCE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹525</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Grilled fish served over mashed potatoes & exotic grilled vegetables with lemon caper butter sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURMESE KHAO SUEY" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BURMESE KHAO SUEY</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A one pot meal with noodles cooked in coconut gravy & served with condiments</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASIAN GREENS IN CHILLY SESAME SAUCE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ASIAN GREENS IN CHILLY SESAME SAUCE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Asian Greens tossed in chilly sesame sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="VEGETABLES / CHICKEN MANCHURIAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">VEGETABLES / CHICKEN MANCHURIAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Dumpling tossed in Manchurian style spicy gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI GREEN CURRY VEG/CHICKEN/PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">THAI GREEN CURRY VEG/CHICKEN/PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Traditional Thai curry served with steamed rice or Canai roti</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRIPLE SCHEZWAN RICE VEG/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">TRIPLE SCHEZWAN RICE VEG/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹350</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hakka noodles, fried rice and crispy noodles in spicy sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BRAISED CHICKEN IN SMOKED CHILLI SAUCE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BRAISED CHICKEN IN SMOKED CHILLI SAUCE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹345</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken cooked in house smoked chilli sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KUNG PAO CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KUNG PAO CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Oriental preparation with light soya & cashew nut</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SAMBAL OELEK STEAK" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SAMBAL OELEK STEAK</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Sambal sauce marinated grilled juicy chicken steak served with Thai fried rice, egg, prawn cracker & salad</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KOREAN VEG/CHICKEN RAMEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KOREAN VEG/CHICKEN RAMEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spicy Korean chicken soup with springy noodles, warm soft-boiled egg and kimchi</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHINA BOX VEG/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHINA BOX VEG/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hakka noodles / fried rice served with black pepper sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KIMCHI FRIED RICE BOWL VEG/ CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">KIMCHI FRIED RICE BOWL VEG/ CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹245</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Homemade kimchi, sesame seeds & spring onion</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DANDAN NOODLES BOWL VEG/ CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">DANDAN NOODLES BOWL VEG/ CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹275</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Noodles tossed with minced vegetables/chicken & spicy chilli sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="HAKKA NOODLES VEG/CHICKEN/PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">HAKKA NOODLES VEG/CHICKEN/PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Shredded vegetables, noodle tossed with light soya sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHILLI GARLIC NOODLES / RICE VEG/CHICKEN/PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹275</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Noodles/rice tossed with chilli garlic sauce</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PEPPER GARLIC FRIED NOODLES / RICE VEG/CHICKEN/PRAWNS" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BUTTER PEPPER GARLIC FRIED NOODLES / RICE VEG/CHICKEN/PRAWNS</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹275</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="THAI STICKY RICE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">THAI STICKY RICE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹225</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURNT GARLIC FRIED RICE/ NOODLES VEG/CHICKEN/PRAWNS  - 275/295/" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">BURNT GARLIC FRIED RICE/ NOODLES VEG/CHICKEN/PRAWNS  - 275/295/</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹325</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Rice/ noodles tossed in burnt garlic</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CRISPY SPINACH FRIED RICE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CRISPY SPINACH FRIED RICE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹275</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A delightful fusion of flavors in this crispy spinach infused Vietnamese fried rice</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SPINACH & GARLIC TEMPERED PUNJABI DAL TADKA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SPINACH & GARLIC TEMPERED PUNJABI DAL TADKA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A wholesome yellow dal cooked with baby palak tempered with onion, tomato garlic & desi ghee</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="RICOTTA CHEESE KOFTA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">RICOTTA CHEESE KOFTA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Ricotta cheese stuffed baby spinach dumplings served with a flavourful curried tomato cream</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MULTIGRAIN KHICHDI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MULTIGRAIN KHICHDI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">An Indian preparation with rice and lentils. Served with curd & pickle</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DAL MAKHANI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">DAL MAKHANI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹315</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Slow simmered black lentils with butter & cream</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ASSORTED TAWA VEGETABLE MASALA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ASSORTED TAWA VEGETABLE MASALA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Assorted spring vegetables cooked with freshly grounded spices simmered in tomato onions gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BEBU AUNTY'S DUM ALOO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BEBU AUNTY'S DUM ALOO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Slow cooked baby potatoes in yogurt-based gravy with hint of dry nuts</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSHROOM CORN HARA PAYAZ MASALA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MUSHROOM CORN HARA PAYAZ MASALA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹365</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A delightful combination of mushrooms, corns & spring onions cooked in onions- tomatoes masala gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MARTABANI CHOLE / PANEER" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MARTABANI CHOLE / PANEER</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹345</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chole/paneer cooked with sirka soaked baby onions in a piquant Punjabi pickle masala</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED MAKHANI PANEER/CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">SMOKED MAKHANI PANEER/CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Juicy paneer/chicken cooked in rich creamy tomatoes & cashew gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PANEER / CHICKEN TIKKA BUTTER MASALA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">PANEER / CHICKEN TIKKA BUTTER MASALA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹375</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Juicy paneer/chicken tikka cooked with onions & tomatoes masala</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LAHORI CHATKARA TAWA CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">LAHORI CHATKARA TAWA CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A flavorful smokey & spicy Lahori Street preparation with aromatic spices, yogurt & lemon juice</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MATKA CHICKEN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MATKA CHICKEN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chicken cooked in earthen pot with perfect blend of chicken & spices in a lip-smacking combination</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHADE MASALE KA BHUNA MURG" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">KHADE MASALE KA BHUNA MURG</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Delicious country style preparation with whole spices, thick & spicy Indian Gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHEF DOGRA'S PAHARI MEAT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">CHEF DOGRA'S PAHARI MEAT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Slow cooked juicy succulent pieces of lamb wrapped in perfect blend of Himachali aromatic spices & herbs</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUTTON ROGAN JOSH" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MUTTON ROGAN JOSH</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Kashmiri lamb curry with aromatic spices</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="ROTI PE GHEE ROAST BOTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">ROTI PE GHEE ROAST BOTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Lamb cooked with aromatic Mangalorean spices finished with desi ghee & served with Malabari paratha</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MUSTARD FISH CURRY" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">MUSTARD FISH CURRY</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹495</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Shallow fried fish fillet cooked in three types of mustard seeds & tomato gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MURG RARA MASALA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MURG RARA MASALA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Spring chicken marinated in roasted spices and slow cooked in a robust chicken keema, tomato & onion gravy</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SMOKED CHICKEN BARRA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">SMOKED CHICKEN BARRA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹395</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Soft and juicy smoked chicken cooked in a flavourful and aromatic gravy with hint of desi ghee</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="DUM BIRYANI - VEG/ CHICKEN/GOSHT" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon non-veg"></span>
+                        <h4 class="item-name">DUM BIRYANI - VEG/ CHICKEN/GOSHT</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹315</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Served with burani raita & gravy</p>
+        </div>
+</div></div>
+<div id="bread" class="category-section">
+<h2 class="category-title">BREAD</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER TANDOORI ROTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">PLAIN / BUTTER TANDOORI ROTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹45</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BUTTER PAO" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BUTTER PAO</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹45</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CANAI ROTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CANAI ROTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹80</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KULCHA MASALA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">KULCHA MASALA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹95</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN / BUTTER / GARLIC NAAN" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">PLAIN / BUTTER / GARLIC NAAN</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹75</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="PLAIN/PUDINA /MIRCHI LACHHA PARATHA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">PLAIN/PUDINA /MIRCHI LACHHA PARATHA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹80</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="KHAMIRI ROTI" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">KHAMIRI ROTI</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹95</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHILLI GARLIC CHEESE NAAN/ STEAMED /JEERA RICE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CHILLI GARLIC CHEESE NAAN/ STEAMED /JEERA RICE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹165</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="BURANI RAITA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">BURANI RAITA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹115</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+</div></div>
+<div id="desserts" class="category-section">
+<h2 class="category-title">DESSERTS</h2>
+<div class="item-list">
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="MOCHA LAVA-LAVA" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">MOCHA LAVA-LAVA</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹235</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Hot molten chocolate under a simmering brownie crust, it's not like we didn't warn you!</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SEA SALT CARAMEL CAKE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SEA SALT CARAMEL CAKE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹235</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Decadent caramel layered cake with flaky sea salt piled five stories high. Indulge!!.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="SIZZLING BROWNIE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">SIZZLING BROWNIE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹250</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Stacks of chocolate brownies with gooey fudge sauce & walnut served over sizzling plate.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="TRES LECHES" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">TRES LECHES</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Rich & moist sponge cake soaked in three types of milk-condensed, evaporated & whole milk.</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="LOTUS BISCOFF CHEESECAKE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">LOTUS BISCOFF CHEESECAKE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹265</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">A thick buttery biscoff biscuit crust, topped with luscious cream cheese topping & crea-my biscoff spread</p>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-top">
+                <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="CHOCOLATE AVALANCHE" class="item-img">
+                <div class="item-info">
+                    <div class="item-title-row">
+                        <span class="diet-icon veg"></span>
+                        <h4 class="item-name">CHOCOLATE AVALANCHE</h4>
+                    </div>
+                    <div class="item-price-row">
+                        <span class="price">₹295</span>
+                        <button class="add-btn">ADD</button>
+                    </div>
+                </div>
+            </div>
+            <p class="item-desc">Chocolate mousse, chocolate brownie, chocolate fudge & chocolate truffles topped with chocolate ice cream. A land slide of chocolate!!</p>
+        </div>
+</div></div>
+</div>
+        </main>
+    </div>
+
+    <script src="menu.js"></script>
+</body>
+</html>

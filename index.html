@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mocha Bar | Restaurant & Lounge</title>
+    <meta name="description" content="Mocha Bar, Restaurant and Lounge.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Mobile Location Bar (Hidden on Desktop) -->
+    <div class="location-bar mobile-only">
+        <div class="location-content">
+            <svg class="icon location-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <span class="location-text">Location - Lucknow, Uttar Pradesh, India</span>
+            <svg class="icon chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-section">
+                <div class="logo-wrapper">
+                    <!-- Simulated logo -->
+                    <div class="logo-placeholder">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="#78350f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="brand-text">
+                    <h1 class="brand-title">Mocha Bar</h1>
+                    <p class="brand-subtitle mobile-only">Mocha Bar - Main Branch</p>
+                </div>
+            </div>
+
+            <!-- Desktop Search and Toggle (Hidden on Mobile) -->
+            <div class="desktop-controls desktop-only">
+                <div class="search-bar">
+                    <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    <input type="text" placeholder="Search for items..." class="search-input">
+                </div>
+                
+                <div class="veg-toggle-container">
+                    <span class="veg-label">Veg only</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Mobile Pickup Button (Hidden on Desktop) -->
+            <div class="mobile-controls mobile-only">
+                <button class="pickup-btn">Pickup</button>
+            </div>
+        </div>
+    </header>
+    
+    <main class="main-content">
+        <div class="menu-section">
+            <h2 class="section-title">What would you like to order?</h2>
+            
+            <div class="menu-grid">
+                <!-- Row 1 -->
+                <a href="menu.html#all-day-breakfast" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1559525839-b184a4d698c7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Best Sellers" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Best Sellers</h3>
+                </a>
+                <a href="menu.html#all-day-breakfast" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="All Day Breakfast" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">All Day Breakfast</h3>
+                </a>
+                <a href="menu.html#soups-and-salads" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Soups and Salads" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Soups and Salads</h3>
+                </a>
+                <a href="menu.html#purani-dilli-ki-chaat" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Purani Dilli Ki Chaat" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Purani Dilli Ki Chaat</h3>
+                </a>
+                
+                <!-- Row 2 -->
+                <a href="menu.html#mocha-mezze-and-dips" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Mezze and Dips" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Mocha Mezze and Dips</h3>
+                </a>
+                <a href="menu.html#appetizers" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Appetizers" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Appetizers</h3>
+                </a>
+                <a href="menu.html#sharing-platter" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1539136788836-5699e78bfc75?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sharing Platter" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Sharing Platter</h3>
+                </a>
+                <a href="menu.html#burgers" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Burgers" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Burgers</h3>
+                </a>
+                
+                <!-- Row 3 -->
+                <a href="menu.html#panini-and-whiches" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Panini and Whiches" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Panini and Whiches</h3>
+                </a>
+                <a href="menu.html#sushi-dimsum-and-baos" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Sushi Dimsum and Baos" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Sushi Dimsum and Baos</h3>
+                </a>
+                <a href="menu.html#pizza" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pizza" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Pizza</h3>
+                </a>
+                <a href="menu.html#mocha-sizzlers" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Sizzlers" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Mocha Sizzlers</h3>
+                </a>
+                
+                <!-- Row 4 -->
+                <a href="menu.html#mocha-mains" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Mains" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Mocha Mains</h3>
+                </a>
+                <a href="menu.html#pastas" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1621996316573-ce8e4ce2ee2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pastas" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Pastas</h3>
+                </a>
+                <a href="menu.html#desserts" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Desserts" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Desserts</h3>
+                </a>
+                <a href="menu.html#bread" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Bread" class="menu-card-bg">
+                    <div class="menu-card-overlay"></div>
+                    <h3 class="menu-card-title">Bread</h3>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="app-footer">
+        <div class="footer-container">
+            <h2 class="footer-title">Mocha Bar</h2>
+            <div class="footer-info">
+                <div class="footer-item">
+                    <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                    </svg>
+                    <span>Narsingi, Hyderabad, .</span>
+                </div>
+                <div class="footer-item">
+                    <svg class="icon document-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
+                    </svg>
+                    <span>GSTIN - 36AAHCN5928J1Z1</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
