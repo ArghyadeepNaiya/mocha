@@ -7,7 +7,7 @@
     <meta name="description" content="Dhunki, Restaurant and Lounge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2378350f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3'/></svg>">
 </head>
@@ -173,20 +173,52 @@
 
     <footer class="app-footer">
         <div class="footer-container">
-            <h2 class="footer-title">Dhunki</h2>
-            <div class="footer-info">
-                <div class="footer-item">
-                    <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                    <span>Ranchi.</span>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <h2 class="footer-brand-title">Dhunki</h2>
+                    <p class="footer-tagline">Where every cup tells a story. Serving artisanal coffee, soulful bites, and classic vibes.</p>
                 </div>
-                <!-- <div class="footer-item">
-                    <svg class="icon document-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                    </svg>
-                    <span>GSTIN - 36AAHCN5928J1Z1</span>
-                </div> -->
+
+                <!-- Hours Column -->
+                <div class="footer-col hours-col">
+                    <h3 class="footer-heading">Opening Hours</h3>
+                    <ul class="footer-list">
+                        <li><span>Mon - Fri:</span> 8:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 9:00 AM - 10:00 PM</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col contact-col">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            Ranchi, Jharkhand
+                        </li>
+                        <li>
+                            <svg class="icon phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.75 0 1-.65 1-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            +91 98765 43210
+                        </li>
+                        <li>
+                            <svg class="icon email-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            hello@dhunki.cafe
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dhunki. All rights reserved.</p>
+                <p class="fssai-text">GSTIN - 36AAHCN5928J1Z1</p>
             </div>
         </div>
     </footer>
