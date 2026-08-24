@@ -1,0 +1,327 @@
+:root {
+    --brand-color: #78350f; /* Dark brown from the main theme */
+    --brand-light: #92400e;
+    --brand-dark: #451a03;
+    --bg-main: #fdfbf7; /* Cream color */
+    --text-dark: #1f2937;
+    --text-light: #6b7280;
+    --border-color: #e5e7eb;
+    --card-bg: #ffffff;
+    --success: #10b981;
+    --success-dark: #047857;
+    --warning: #f59e0b;
+    --danger: #ef4444;
+}
+
+body {
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-dark);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Header */
+.header {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 20px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(120, 53, 15, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.clock {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.15);
+    padding: 8px 16px;
+    border-radius: 12px;
+    letter-spacing: 1px;
+}
+
+.main-content {
+    padding: 32px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.filter-btn {
+    background: var(--card-bg);
+    border: 2px solid var(--border-color);
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.filter-btn:hover {
+    border-color: var(--brand-light);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--brand-color);
+    color: white;
+    border-color: var(--brand-color);
+    box-shadow: 0 8px 16px rgba(120, 53, 15, 0.2);
+}
+
+/* Grid */
+.orders-grid {
+    display: grid;
+    /* Responsive auto-fill for mobile to large desktop */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 32px;
+}
+
+/* Cards */
+.order-card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* Bold, deep shadow for POS feel */
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+    will-change: transform, opacity; /* For GSAP */
+}
+
+.order-card:hover {
+    box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+}
+
+.order-header {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.order-header.completed {
+    background-color: var(--success);
+}
+
+.table-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.table-name {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1;
+}
+
+.device-info {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+}
+
+.time-info {
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: rgba(255,255,255,0.2);
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.time-elapsed {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--warning);
+    background: rgba(0,0,0,0.4);
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+.order-header.completed .time-elapsed {
+    display: none; /* Hide elapsed time for completed orders */
+}
+
+/* Order Items */
+.order-body {
+    padding: 24px;
+    flex-grow: 1;
+    background-color: #fafafa;
+}
+
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 2px dashed #e2e8f0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+.item:first-child {
+    padding-top: 0;
+}
+
+.item-qty {
+    background-color: var(--brand-light);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-right: 16px;
+    min-width: 32px;
+    text-align: center;
+    display: inline-block;
+    box-shadow: inset 0 -2px 0 rgba(0,0,0,0.1);
+}
+
+.order-header.completed + .order-body .item-qty {
+    background-color: var(--success-dark);
+}
+
+.item-name {
+    flex-grow: 1;
+    line-height: 1.3;
+}
+
+/* Footer / Action */
+.order-footer {
+    padding: 20px;
+    background-color: white;
+    border-top: 1px solid var(--border-color);
+}
+
+.complete-btn {
+    width: 100%;
+    background-color: var(--brand-color);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Outfit', sans-serif;
+    box-shadow: 0 4px 6px rgba(120, 53, 15, 0.2);
+}
+
+.complete-btn:hover {
+    background-color: var(--brand-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(120, 53, 15, 0.3);
+}
+
+.complete-btn:active {
+    transform: translateY(0);
+}
+
+/* Empty State */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 80px 20px;
+    color: var(--text-light);
+    background: white;
+    border-radius: 24px;
+    border: 2px dashed var(--border-color);
+}
+
+.empty-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 24px;
+    opacity: 0.3;
+    color: var(--brand-color);
+}
+
+.empty-state h2 {
+    font-size: 2rem;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+    .header {
+        padding: 16px;
+    }
+    .header h1 {
+        font-size: 1.25rem;
+    }
+    .clock {
+        font-size: 1rem;
+        padding: 6px 12px;
+    }
+    .main-content {
+        padding: 16px;
+    }
+    .filters {
+        flex-direction: column;
+    }
+    .filter-btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 1.2rem;
+    }
+    .orders-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .table-name {
+        font-size: 2rem;
+    }
+    .item {
+        font-size: 1.1rem;
+    }
+}

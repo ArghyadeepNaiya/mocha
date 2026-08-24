@@ -6,13 +6,15 @@ let currentModalQty = 1;
 const taxRate = 0.05;
 
 document.addEventListener('DOMContentLoaded', () => {
-    const addBtns = document.querySelectorAll('.add-btn');
+    const menuItems = document.querySelectorAll('.menu-item');
     
     // Modal Elements
     const modal = document.getElementById('customization-modal');
     const modalOverlay = document.getElementById('modal-overlay');
     const closeModalBtn = document.getElementById('close-modal-btn');
     const modalItemName = document.getElementById('modal-item-name');
+    const modalItemImg = document.getElementById('modal-item-img');
+    const modalItemIngredients = document.getElementById('modal-item-ingredients');
     const modalQty = document.getElementById('modal-qty');
     const modalQtyMinus = document.getElementById('modal-qty-minus');
     const modalQtyPlus = document.getElementById('modal-qty-plus');
@@ -32,16 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const cartTaxesEl = document.getElementById('cart-taxes');
     const cartTotalEl = document.getElementById('cart-total');
     const placeOrderBtn = document.getElementById('place-order-btn');
+    
+    // Freq Bought Elements
+    const freqBoughtSection = document.getElementById('cart-freq-bought-section');
+    const freqBoughtItemsContainer = document.getElementById('freq-bought-items-container');
 
-    // Setup Add Buttons
-    addBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            const menuItem = e.target.closest('.menu-item');
+    // Setup Menu Item Click to Open Modal
+    menuItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const menuItem = e.currentTarget;
             const name = menuItem.querySelector('.item-name').textContent;
             const priceText = menuItem.querySelector('.price').textContent;
             const price = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
+            const imgSrc = menuItem.querySelector('.item-img').src;
+            const ingredients = menuItem.getAttribute('data-ingredients') || 'Ingredients not available';
+            const nutritionEl = menuItem.querySelector('.nutritional-overlay');
+            const nutritionHtml = nutritionEl ? nutritionEl.innerHTML : '';
             
-            openModal({ name, basePrice: price });
+            openModal({ name, basePrice: price, image: imgSrc, ingredients: ingredients, nutritionHtml: nutritionHtml });
         });
     });
 
@@ -50,6 +60,14 @@ document.addEventListener('DOMContentLoaded', () => {
         currentItemForModal = item;
         currentModalQty = 1;
         modalItemName.textContent = item.name;
+        if (modalItemImg) modalItemImg.src = item.image;
+        if (modalItemIngredients) modalItemIngredients.textContent = item.ingredients;
+        
+        const nutritionContainer = document.getElementById('modal-nutrition-container');
+        if (nutritionContainer) {
+            nutritionContainer.innerHTML = item.nutritionHtml || '';
+        }
+
         modalQty.textContent = currentModalQty;
         specialInstructions.value = '';
         addonCheckboxes.forEach(cb => cb.checked = false);
@@ -113,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const cartItem = {
             id: Date.now().toString(), // unique ID for this cart entry
             name: currentItemForModal.name,
+            image: currentItemForModal.image,
             basePrice: currentItemForModal.basePrice,
             addons: addons,
             addonsTotal: addonsTotal,
@@ -131,7 +150,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Cart Logic
+    function populateFreqBoughtItems() {
+        const allItems = Array.from(document.querySelectorAll('.menu-item'));
+        if (allItems.length === 0) return;
+        
+        let selected = [];
+        
+        if (typeof Analytics !== 'undefined') {
+            const cartItemNames = cart.map(i => i.name);
+            const suggestions = Analytics.getSuggestionsForCart(cartItemNames);
+            
+            // Find HTML elements for suggestions
+            suggestions.forEach(suggestedName => {
+                if (selected.length < 3) {
+                    const itemEl = allItems.find(el => el.querySelector('.item-name').textContent === suggestedName);
+                    if (itemEl && !cartItemNames.includes(suggestedName)) {
+                        selected.push(itemEl);
+                    }
+                }
+            });
+        }
+        
+        // Fill remaining with random (not in cart, not already selected)
+        if (selected.length < 3) {
+            const cartNames = cart.map(i => i.name);
+            const availableForRandom = allItems.filter(el => {
+                const n = el.querySelector('.item-name').textContent;
+                return !cartNames.includes(n) && !selected.includes(el);
+            });
+            const shuffled = availableForRandom.sort(() => 0.5 - Math.random());
+            selected = [...selected, ...shuffled.slice(0, 3 - selected.length)];
+        }
+        
+        freqBoughtItemsContainer.innerHTML = '';
+        selected.forEach(item => {
+            const name = item.querySelector('.item-name').textContent;
+            const priceText = item.querySelector('.price').textContent;
+            const price = parseInt(priceText.replace(/[^0-9]/g, ''), 10);
+            const imgSrc = item.querySelector('.item-img').src;
+            const ingredients = item.getAttribute('data-ingredients') || 'Ingredients not available';
+            
+            const html = `
+                <div class="freq-item">
+                    <img src="${imgSrc}" class="freq-item-img" alt="${name}">
+                    <div class="freq-item-info">
+                        <h5 class="freq-item-name">${name}</h5>
+                        <span class="freq-item-price">₹${price}</span>
+                    </div>
+                    <button class="freq-item-add-btn" onclick="window.addFreqItemToCart('${name.replace(/'/g, "\\'")}', ${price}, '${imgSrc}', '${ingredients.replace(/'/g, "\\'")}')">ADD</button>
+                </div>
+            `;
+            freqBoughtItemsContainer.insertAdjacentHTML('beforeend', html);
+        });
+        freqBoughtSection.style.display = 'block';
+    }
+
+    window.addFreqItemToCart = function(name, price, image, ingredients) {
+        openModal({ name, basePrice: price, image, ingredients });
+    };
+
     function openCart() {
+        if (cart.length > 0) {
+            populateFreqBoughtItems();
+        } else {
+            freqBoughtSection.style.display = 'none';
+        }
         cartSidebar.classList.add('open');
         cartOverlay.classList.add('active');
     }
@@ -162,10 +245,12 @@ document.addEventListener('DOMContentLoaded', () => {
             cartTaxesEl.textContent = '₹0';
             cartTotalEl.textContent = '₹0';
             placeOrderBtn.disabled = true;
+            freqBoughtSection.style.display = 'none';
             return;
         }
 
         placeOrderBtn.disabled = false;
+        freqBoughtSection.style.display = 'block';
         cartItemsContainer.innerHTML = '';
         let subtotal = 0;
 
@@ -178,19 +263,23 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const html = `
                 <div class="cart-item">
-                    <div class="cart-item-header">
-                        <h4 class="cart-item-title">${item.name}</h4>
-                        <span class="cart-item-price">₹${itemTotal}</span>
-                    </div>
-                    ${addonsText ? `<div class="cart-item-addons">${addonsText}</div>` : ''}
-                    ${instText ? `<div class="cart-item-addons" style="font-style: italic;">${instText}</div>` : ''}
-                    <div class="cart-item-actions">
-                        <div class="qty-controls">
-                            <button class="qty-btn" onclick="window.updateCartItemQty('${item.id}', -1)">-</button>
-                            <span class="qty-val">${item.quantity}</span>
-                            <button class="qty-btn" onclick="window.updateCartItemQty('${item.id}', 1)">+</button>
+                    <img class="cart-item-img" src="${item.image}" alt="${item.name}" />
+                    <div class="cart-item-details">
+                        <div class="cart-item-header">
+                            <h4 class="cart-item-title">${item.name}</h4>
+                            <span class="cart-item-price">₹${itemTotal}</span>
                         </div>
-                        <button class="remove-btn" onclick="window.removeCartItem('${item.id}')">Remove</button>
+                        ${addonsText ? `<div class="cart-item-addons">${addonsText}</div>` : ''}
+                        ${instText ? `<div class="cart-item-addons" style="font-style: italic;">${instText}</div>` : ''}
+                        
+                        <div class="cart-item-controls">
+                            <div class="quantity-controls small">
+                                <button onclick="window.updateCartItemQty('${item.id}', -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button onclick="window.updateCartItemQty('${item.id}', 1)">+</button>
+                            </div>
+                            <button class="remove-item-btn" onclick="window.removeCartItem('${item.id}')">Remove</button>
+                        </div>
                     </div>
                 </div>
             `;
@@ -232,6 +321,65 @@ document.addEventListener('DOMContentLoaded', () => {
         const grandTotal = cartTotalEl.textContent;
         
         alert(`Order Placed for Table: ${tableNumber}!\n\nItems:\n${orderSummary}\n\nTotal: ${grandTotal}\n\nOur chef is preparing your meal.`);
+        
+        // --- Kitchen Dashboard Logic ---
+        const deviceId = localStorage.getItem('mochaDeviceId') || 'UnknownDevice';
+        const todayDate = new Date().toDateString();
+        
+        let kitchenOrders = [];
+        try {
+            kitchenOrders = JSON.parse(localStorage.getItem('mochaKitchenOrders')) || [];
+        } catch (e) {
+            kitchenOrders = [];
+        }
+
+        // Purge old orders (different day)
+        kitchenOrders = kitchenOrders.filter(order => order.date === todayDate);
+
+        // Find existing order for same table and device today
+        let existingOrder = kitchenOrders.find(o => o.tableNumber === tableNumber && o.deviceId === deviceId && o.status === 'pending');
+
+        let orderId = '';
+        if (existingOrder) {
+            // Merge items
+            orderId = existingOrder.id;
+            cart.forEach(cartItem => {
+                let existingItem = existingOrder.items.find(i => i.name === cartItem.name);
+                if (existingItem) {
+                    existingItem.quantity += cartItem.quantity;
+                } else {
+                    existingOrder.items.push({...cartItem});
+                }
+            });
+            existingOrder.timestamp = Date.now(); // update time to latest
+        } else {
+            // Create new order
+            orderId = 'ORD-' + Math.random().toString(36).substr(2, 6).toUpperCase();
+            kitchenOrders.push({
+                id: orderId,
+                tableNumber: tableNumber,
+                deviceId: deviceId,
+                date: todayDate,
+                timestamp: Date.now(),
+                items: JSON.parse(JSON.stringify(cart)),
+                status: 'pending'
+            });
+        }
+
+        localStorage.setItem('mochaKitchenOrders', JSON.stringify(kitchenOrders));
+        
+        // --- Manager Analytics Logic ---
+        if (typeof Analytics !== 'undefined') {
+            // We store the current order id in session storage to cancel it later if needed
+            sessionStorage.setItem('mochaLastOrderId', orderId);
+            Analytics.logOrder(cart, grandTotal, orderId);
+        }
+        // --- End Kitchen Logic ---
+
+        
+        // Set 1 minute cancellation timer
+        localStorage.setItem('mochaOrderCancelEndTime', Date.now() + 60000);
+        window.dispatchEvent(new Event('orderPlaced'));
         
         // Reset Cart
         cart = [];

@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 0. Device ID Setup
+    if (!localStorage.getItem('mochaDeviceId')) {
+        const randomId = Math.random().toString(36).substring(2, 8).toUpperCase();
+        localStorage.setItem('mochaDeviceId', randomId);
+    }
+
     // 1. Table Context Setup & QR Loader
     const urlParams = new URLSearchParams(window.location.search);
     const tableFromUrl = urlParams.get('table');
@@ -188,8 +194,174 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
         
+        const mobileSearchBtn = document.querySelector('.mobile-search-btn');
+        const mobileSearchContainer = document.querySelector('.mobile-search-container');
+        if (mobileSearchBtn && mobileSearchContainer) {
+            mobileSearchBtn.addEventListener('click', () => {
+                if (mobileSearchContainer.style.display === 'none') {
+                    mobileSearchContainer.style.display = 'block';
+                    mobileSearchContainer.querySelector('input').focus();
+                } else {
+                    mobileSearchContainer.style.display = 'none';
+                    // clear search on close
+                    searchInputs.forEach(i => i.value = '');
+                    applyFilters();
+                }
+            });
+        }
+        
         const savedPref = localStorage.getItem('dietPreference') || 'all';
         updateToggleUI(savedPref);
         applyFilters();
     }
+
+    // Global Order Cancellation Timer
+    function initCancellationTimer() {
+        // Inject CSS if not exists
+        if (!document.getElementById('cancellation-timer-styles')) {
+            const style = document.createElement('style');
+            style.id = 'cancellation-timer-styles';
+            style.textContent = `
+                #cancel-timer-banner {
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    background-color: var(--brand-color, #78350f);
+                    color: white;
+                    padding: 12px 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+                    z-index: 9999;
+                    font-family: 'Outfit', sans-serif;
+                    box-sizing: border-box;
+                    transform: translateY(100%);
+                    transition: transform 0.3s ease-out;
+                }
+                #cancel-timer-banner.visible {
+                    transform: translateY(0);
+                }
+                .cancel-timer-text {
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                .cancel-btn {
+                    background: var(--bg-main, #fdfbf7);
+                    color: var(--brand-color, #78350f);
+                    border: none;
+                    padding: 6px 16px;
+                    border-radius: 6px;
+                    font-weight: 600;
+                    cursor: pointer;
+                    transition: opacity 0.2s;
+                }
+                .cancel-btn:hover {
+                    opacity: 0.9;
+                }
+                body.timer-active .floating-cart-btn {
+                    bottom: 70px !important;
+                }
+            `;
+            document.head.appendChild(style);
+        }
+
+        let banner = document.getElementById('cancel-timer-banner');
+        let timerInterval;
+
+        function updateBanner() {
+            const endTime = localStorage.getItem('mochaOrderCancelEndTime');
+            if (!endTime) {
+                hideBanner();
+                return;
+            }
+
+            const remaining = Math.max(0, Math.ceil((parseInt(endTime, 10) - Date.now()) / 1000));
+            
+            if (remaining <= 0) {
+                localStorage.removeItem('mochaOrderCancelEndTime');
+                hideBanner();
+                return;
+            }
+
+            if (!banner) {
+                banner = document.createElement('div');
+                banner.id = 'cancel-timer-banner';
+                banner.innerHTML = `
+                    <span class="cancel-timer-text">Order placed. You have <strong id="cancel-countdown">${remaining}</strong>s to cancel.</span>
+                    <button class="cancel-btn" id="cancel-order-btn">Cancel Order</button>
+                `;
+                document.body.appendChild(banner);
+                
+                // Add padding to body so footer is not hidden
+                document.body.style.paddingBottom = '60px';
+                document.body.classList.add('timer-active');
+                
+                // Trigger animation
+                requestAnimationFrame(() => {
+                    banner.classList.add('visible');
+                });
+
+                document.getElementById('cancel-order-btn').addEventListener('click', () => {
+                    localStorage.removeItem('mochaOrderCancelEndTime');
+                    hideBanner();
+                    
+                    // --- Manager Analytics Logic ---
+                    if (typeof Analytics !== 'undefined') {
+                        const lastOrderId = sessionStorage.getItem('mochaLastOrderId');
+                        if (lastOrderId) {
+                            Analytics.logCancellation(lastOrderId);
+                        }
+                    }
+                    // ---
+                    
+                    alert("Your order has been cancelled successfully.");
+                });
+            } else {
+                const countdownEl = document.getElementById('cancel-countdown');
+                if (countdownEl) countdownEl.textContent = remaining;
+                if (!banner.classList.contains('visible')) {
+                    banner.classList.add('visible');
+                    document.body.style.paddingBottom = '60px';
+                    document.body.classList.add('timer-active');
+                }
+            }
+        }
+
+        function hideBanner() {
+            if (banner) {
+                banner.classList.remove('visible');
+                document.body.style.paddingBottom = '';
+                document.body.classList.remove('timer-active');
+                setTimeout(() => {
+                    if (banner && banner.parentNode) {
+                        banner.parentNode.removeChild(banner);
+                        banner = null;
+                    }
+                }, 300);
+            }
+            if (timerInterval) {
+                clearInterval(timerInterval);
+                timerInterval = null;
+            }
+        }
+
+        updateBanner();
+        timerInterval = setInterval(updateBanner, 1000);
+        
+        window.addEventListener('storage', (e) => {
+            if (e.key === 'mochaOrderCancelEndTime') {
+                if (!timerInterval) timerInterval = setInterval(updateBanner, 1000);
+                updateBanner();
+            }
+        });
+        
+        window.addEventListener('orderPlaced', () => {
+            if (!timerInterval) timerInterval = setInterval(updateBanner, 1000);
+            updateBanner();
+        });
+    }
+
+    initCancellationTimer();
 });

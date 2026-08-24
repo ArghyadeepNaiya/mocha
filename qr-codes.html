@@ -6,71 +6,7 @@
     <title>Table QR Codes - Dhunki</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-    <style>
-        :root {
-            --brand-color: #78350f;
-            --bg-color: #f8fafc;
-        }
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-color);
-            color: #1e293b;
-            padding: 40px;
-            margin: 0;
-            text-align: center;
-        }
-        h1 {
-            color: var(--brand-color);
-            margin-bottom: 10px;
-        }
-        p.subtitle {
-            color: #64748b;
-            margin-bottom: 40px;
-        }
-        .qr-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .qr-card {
-            background: white;
-            padding: 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 2px dashed #e2e8f0;
-        }
-        .qr-card h2 {
-            margin: 0 0 20px 0;
-            color: var(--brand-color);
-            font-size: 1.5rem;
-        }
-        .qr-code {
-            margin-bottom: 20px;
-            padding: 10px;
-            background: white;
-        }
-        .qr-card p {
-            font-size: 0.875rem;
-            color: #94a3b8;
-            margin: 0;
-        }
-        @media print {
-            body {
-                background: white;
-                padding: 0;
-            }
-            .qr-card {
-                box-shadow: none;
-                border: 1px solid #000;
-                page-break-inside: avoid;
-            }
-        }
-    </style>
+    <link href="qr-codes.css" rel="stylesheet">
 </head>
 <body>
     <h1>Table QR Codes</h1>
@@ -86,8 +22,8 @@
             const totalTables = 10;
             
             // Generate absolute base URL for the menu page
-            // Assuming this page is hosted in the same directory as menu.html
-            const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/menu.html';
+            // Assuming this page is hosted in the same directory as index.html
+            const baseUrl = window.location.href.substring(0, window.location.href.lastIndexOf('/')) + '/index.html';
 
             for (let i = 1; i <= totalTables; i++) {
                 const card = document.createElement('div');
