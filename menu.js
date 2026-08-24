@@ -1,4 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Table Context Setup & QR Loader
+    const urlParams = new URLSearchParams(window.location.search);
+    const tableFromUrl = urlParams.get('table');
+    const qrLoader = document.getElementById('qr-loader');
+    
+    if (tableFromUrl) {
+        sessionStorage.setItem('mochaTableNumber', tableFromUrl);
+        // Clean URL to not show query params if desired
+        window.history.replaceState({}, document.title, window.location.pathname);
+        
+        // Hide loader after 2 seconds to simulate loading
+        setTimeout(() => {
+            if (qrLoader) qrLoader.classList.add('hidden');
+        }, 2000);
+    } else {
+        // If not loaded via QR, hide immediately
+        if (qrLoader) qrLoader.classList.add('hidden');
+    }
+    
+    const currentTable = sessionStorage.getItem('mochaTableNumber');
+    const tableBadges = document.querySelectorAll('.table-badge');
+    const tableNumbers = document.querySelectorAll('.table-number-display');
+    
+    if (currentTable) {
+        tableBadges.forEach(badge => badge.style.display = 'inline-block');
+        tableNumbers.forEach(num => num.textContent = currentTable);
+    }
+
     const sections = document.querySelectorAll('.category-section');
     const desktopLinks = document.querySelectorAll('.sidebar-categories a');
     const mobileLinks = document.querySelectorAll('.mobile-category-scroll a');
