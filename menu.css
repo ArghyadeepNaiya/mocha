@@ -131,8 +131,19 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    padding-bottom: 30px;
-    border-bottom: 1px dashed #e0e0e0;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border: 1px solid #f1f5f9;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+    will-change: transform, opacity;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
 }
 
 .item-top {
@@ -836,5 +847,60 @@
         opacity: 1;
         stroke-dashoffset: 0;
     }
+}
+
+
+/* Scroll-Driven Animations */
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    @keyframes revealCard {
+      from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.95);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .menu-item {
+      animation: revealCard auto linear backwards;
+      animation-timeline: view();
+      animation-range: entry 10% cover 25%;
+    }
+  }
+}
+
+/* Glassmorphism for Modal and Cart */
+.cart-sidebar {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.custom-modal {
+    background: rgba(255, 255, 255, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.modal-content, .cart-body, .cart-footer, .cart-header, .modal-header, .modal-footer {
+    background: transparent !important;
+}
+
+.cart-item {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.cart-item-header {
+    margin-bottom: 4px !important;
 }
 
