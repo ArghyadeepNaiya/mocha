@@ -30,10 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeCartBtn = document.getElementById('close-cart-btn');
     const cartBadge = document.getElementById('cart-badge');
     const cartItemsContainer = document.getElementById('cart-items-container');
-    const cartSubtotalEl = document.getElementById('cart-subtotal');
-    const cartTaxesEl = document.getElementById('cart-taxes');
-    const cartTotalEl = document.getElementById('cart-total');
-    const placeOrderBtn = document.getElementById('place-order-btn');
+    const slideToOrderContainer = document.getElementById('slide-to-order-container');
+    const slideBg = document.getElementById('slide-bg');
+    const slideText = document.getElementById('slide-text');
+    const slideThumb = document.getElementById('slide-thumb');
     
     // Freq Bought Elements
     const freqBoughtSection = document.getElementById('cart-freq-bought-section');
@@ -241,15 +241,12 @@ document.addEventListener('DOMContentLoaded', () => {
         // Render items
         if (cart.length === 0) {
             cartItemsContainer.innerHTML = '<div class="empty-cart-msg">Your cart is empty</div>';
-            cartSubtotalEl.textContent = '₹0';
-            cartTaxesEl.textContent = '₹0';
-            cartTotalEl.textContent = '₹0';
-            placeOrderBtn.disabled = true;
+            if (slideToOrderContainer) slideToOrderContainer.classList.add('disabled');
             freqBoughtSection.style.display = 'none';
             return;
         }
 
-        placeOrderBtn.disabled = false;
+        if (slideToOrderContainer) slideToOrderContainer.classList.remove('disabled');
         freqBoughtSection.style.display = 'block';
         cartItemsContainer.innerHTML = '';
         let subtotal = 0;
@@ -286,13 +283,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cartItemsContainer.insertAdjacentHTML('beforeend', html);
         });
 
-        // Totals
-        const taxes = Math.round(subtotal * taxRate);
-        const grandTotal = subtotal + taxes;
-
-        cartSubtotalEl.textContent = `₹${subtotal}`;
-        cartTaxesEl.textContent = `₹${taxes}`;
-        cartTotalEl.textContent = `₹${grandTotal}`;
+        // Totals removed from UI
     }
 
     // Global functions for inline HTML event handlers
@@ -313,14 +304,84 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCartUI();
     };
 
-    // Place Order
-    placeOrderBtn.addEventListener('click', () => {
+    // Slide to Order Mechanics
+    let isDragging = false;
+    let startX = 0;
+    
+    if (slideThumb) {
+        slideThumb.addEventListener('mousedown', startDrag);
+        slideThumb.addEventListener('touchstart', startDrag, {passive: true});
+        
+        document.addEventListener('mousemove', drag, {passive: false});
+        document.addEventListener('touchmove', drag, {passive: false});
+        
+        document.addEventListener('mouseup', endDrag);
+        document.addEventListener('touchend', endDrag);
+    }
+
+    function startDrag(e) {
+        if (slideToOrderContainer.classList.contains('disabled')) return;
+        isDragging = true;
+        startX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        slideThumb.style.transition = 'none';
+        slideBg.style.transition = 'none';
+        slideToOrderContainer.classList.add('active');
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        
+        // Only prevent default on touchmove to avoid scroll blocking on mousedown
+        if (e.type === 'touchmove' && e.cancelable) {
+            e.preventDefault(); 
+        }
+
+        const currentX = e.type.includes('mouse') ? e.clientX : e.touches[0].clientX;
+        const diffX = currentX - startX;
+        
+        const containerWidth = slideToOrderContainer.offsetWidth;
+        const thumbWidth = slideThumb.offsetWidth;
+        const maxSlide = containerWidth - thumbWidth - 10; // 5px padding on each side
+        
+        let newLeft = Math.max(0, Math.min(diffX, maxSlide));
+        slideThumb.style.transform = `translateX(${newLeft}px)`;
+        slideBg.style.width = `${newLeft + thumbWidth / 2}px`;
+        
+        if (newLeft >= maxSlide) {
+            isDragging = false;
+            
+            // Revert UI slightly before alert
+            slideThumb.style.transition = 'transform 0.3s';
+            slideBg.style.transition = 'width 0.3s';
+            slideThumb.style.transform = 'translateX(0)';
+            slideBg.style.width = '0';
+            slideToOrderContainer.classList.remove('active');
+            
+            placeOrder();
+        }
+    }
+
+    function endDrag(e) {
+        if (!isDragging) return;
+        isDragging = false;
+        slideThumb.style.transition = 'transform 0.3s ease-out';
+        slideBg.style.transition = 'width 0.3s ease-out';
+        slideThumb.style.transform = 'translateX(0)';
+        slideBg.style.width = '0';
+        slideToOrderContainer.classList.remove('active');
+    }
+
+    function placeOrder() {
         const tableNumber = sessionStorage.getItem('mochaTableNumber') || 'Takeaway/Unknown';
         
-        const orderSummary = cart.map(i => `${i.quantity}x ${i.name}`).join('\n');
-        const grandTotal = cartTotalEl.textContent;
+        let subtotal = 0;
+        cart.forEach(item => subtotal += item.unitPrice * item.quantity);
+        const taxes = Math.round(subtotal * taxRate);
+        const grandTotal = `₹${subtotal + taxes}`;
         
-        alert(`Order Placed for Table: ${tableNumber}!\n\nItems:\n${orderSummary}\n\nTotal: ${grandTotal}\n\nOur chef is preparing your meal.`);
+        const orderSummary = cart.map(i => `${i.quantity}x ${i.name}`).join('\n');
+        
+        alert(`Order Placed for Table: ${tableNumber}!\n\nItems:\n${orderSummary}\n\nOur chef is preparing your meal.`);
         
         // --- Kitchen Dashboard Logic ---
         const deviceId = localStorage.getItem('mochaDeviceId') || 'UnknownDevice';
@@ -385,5 +446,5 @@ document.addEventListener('DOMContentLoaded', () => {
         cart = [];
         updateCartUI();
         closeCart();
-    });
+    }
 });
