@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mocha Bar | Restaurant & Lounge</title>
-    <meta name="description" content="Mocha Bar, Restaurant and Lounge.">
+    <title>Dhunki | Restaurant & Lounge</title>
+    <meta name="description" content="Dhunki, Restaurant and Lounge.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2378350f' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z M6 1v3 M10 1v3 M14 1v3'/></svg>">
 </head>
 <body>
     <!-- Mobile Location Bar (Hidden on Desktop) -->
@@ -18,7 +19,7 @@
                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
                 <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            <span class="location-text">Location - Lucknow, Uttar Pradesh, India</span>
+            <span class="location-text">Location - 601, Pranami Height, Lalpur, Ranchi</span>
             <svg class="icon chevron-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="6 9 12 15 18 9"></polyline>
             </svg>
@@ -37,13 +38,14 @@
                     </div>
                 </div>
                 <div class="brand-text">
-                    <h1 class="brand-title">Mocha Bar</h1>
-                    <p class="brand-subtitle mobile-only">Mocha Bar - Main Branch</p>
+                    <h1 class="brand-title">Dhunki</h1>
+                    <p class="brand-subtitle mobile-only">Dhunki - Main Branch</p>
+                    <span class="table-badge" style="display: none; background-color: #f59e0b; color: #fff; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; font-weight: 600; margin-top: 4px;">Table <span class="table-number-display"></span></span>
                 </div>
             </div>
 
             <!-- Desktop Search and Toggle (Hidden on Mobile) -->
-            <div class="desktop-controls desktop-only">
+            <div class="search-container desktop-only">
                 <div class="search-bar">
                     <svg class="icon search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
@@ -51,13 +53,18 @@
                     </svg>
                     <input type="text" placeholder="Search for items..." class="search-input">
                 </div>
-                
+            </div>
+
+            <div class="desktop-controls desktop-only">
+
                 <div class="veg-toggle-container">
-                    <span class="veg-label">Veg only</span>
+                    <span class="diet-icon veg" title="Veg Only"></span>
                     <label class="toggle-switch">
                         <input type="checkbox">
                         <span class="toggle-slider"></span>
                     </label>
+                    <span class="diet-icon non-veg" title="Non-Veg Only"></span>
+                    <span class="diet-icon all" title="Show All"></span>
                 </div>
             </div>
 
@@ -96,10 +103,10 @@
                 </a>
                 
                 <!-- Row 2 -->
-                <a href="menu.html#mocha-mezze-and-dips" class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Mezze and Dips" class="menu-card-bg">
+                <a href="menu.html#dhunki-mezze-and-dips" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dhunki Mezze and Dips" class="menu-card-bg">
                     <div class="menu-card-overlay"></div>
-                    <h3 class="menu-card-title">Mocha Mezze and Dips</h3>
+                    <h3 class="menu-card-title">Dhunki Mezze and Dips</h3>
                 </a>
                 <a href="menu.html#appetizers" class="menu-card">
                     <img src="https://images.unsplash.com/photo-1541529086526-db283c563270?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Appetizers" class="menu-card-bg">
@@ -133,17 +140,17 @@
                     <div class="menu-card-overlay"></div>
                     <h3 class="menu-card-title">Pizza</h3>
                 </a>
-                <a href="menu.html#mocha-sizzlers" class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Sizzlers" class="menu-card-bg">
+                <a href="menu.html#dhunki-sizzlers" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dhunki Sizzlers" class="menu-card-bg">
                     <div class="menu-card-overlay"></div>
-                    <h3 class="menu-card-title">Mocha Sizzlers</h3>
+                    <h3 class="menu-card-title">Dhunki Sizzlers</h3>
                 </a>
                 
                 <!-- Row 4 -->
-                <a href="menu.html#mocha-mains" class="menu-card">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Mocha Mains" class="menu-card-bg">
+                <a href="menu.html#dhunki-mains" class="menu-card">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Dhunki Mains" class="menu-card-bg">
                     <div class="menu-card-overlay"></div>
-                    <h3 class="menu-card-title">Mocha Mains</h3>
+                    <h3 class="menu-card-title">Dhunki Mains</h3>
                 </a>
                 <a href="menu.html#pastas" class="menu-card">
                     <img src="https://images.unsplash.com/photo-1621996316573-ce8e4ce2ee2e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Pastas" class="menu-card-bg">
@@ -166,22 +173,65 @@
 
     <footer class="app-footer">
         <div class="footer-container">
-            <h2 class="footer-title">Mocha Bar</h2>
-            <div class="footer-info">
-                <div class="footer-item">
-                    <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                    <span>Narsingi, Hyderabad, .</span>
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-col brand-col">
+                    <h2 class="footer-brand-title">Dhunki</h2>
+                    <p class="footer-tagline">Where every cup tells a story. Serving artisanal coffee, soulful bites, and classic vibes.</p>
                 </div>
-                <div class="footer-item">
-                    <svg class="icon document-icon" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/>
-                    </svg>
-                    <span>GSTIN - 36AAHCN5928J1Z1</span>
+
+                <!-- Hours Column -->
+                <div class="footer-col hours-col">
+                    <h3 class="footer-heading">Opening Hours</h3>
+                    <ul class="footer-list">
+                        <li><span>Mon - Fri:</span> 8:00 AM - 10:00 PM</li>
+                        <li><span>Saturday:</span> 9:00 AM - 11:00 PM</li>
+                        <li><span>Sunday:</span> 9:00 AM - 10:00 PM</li>
+                    </ul>
                 </div>
+
+                <!-- Contact Column -->
+                <div class="footer-col contact-col">
+                    <h3 class="footer-heading">Contact Us</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <svg class="icon location-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                            </svg>
+                            601, 6th floor, Pranami Height, Lalpur, beside K.C.Roy Memorial hospital, Lalpur, Ranchi, Jharkhand 834001
+                        </li>
+                        <li>
+                            <svg class="icon phone-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.03 21c.75 0 1-.65 1-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+                            </svg>
+                            +91 98765 43210
+                        </li>
+                        <li>
+                            <svg class="icon email-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                            hello@dhunki.cafe
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Location Map Column -->
+                <div class="footer-col map-col">
+                    <h3 class="footer-heading">Find Us</h3>
+                    <div class="map-container" style="width: 100%; height: 150px; border-radius: 8px; overflow: hidden; opacity: 0.85; border: 1px solid rgba(253, 251, 247, 0.2);">
+                        <iframe src="https://maps.google.com/maps?q=Dhunki,+Ranchi&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Dhunki. All rights reserved.</p>
+                <p class="fssai-text">GSTIN - 36AAHCN5928J1Z1</p>
             </div>
         </div>
     </footer>
+    <script src="analytics.js"></script>
+    <script src="dynamic-bg.js"></script>
+    <script src="menu.js"></script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Dashboard - Dhunki</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link href="kitchen.css" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>Kitchen Dashboard - Dhunki</h1>
+        <div class="clock" id="real-time-clock">00:00:00</div>
+    </header>
+
+    <main class="main-content">
+        <div class="filters">
+            <button class="filter-btn active" data-filter="pending">Pending Orders</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+
+        <div class="orders-grid" id="orders-container">
+            <!-- Orders injected via JS -->
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="kitchen.js"></script>
+</body>
+</html>

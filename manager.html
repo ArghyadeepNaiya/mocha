@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manager Dashboard - Dhunki</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <link rel="stylesheet" href="manager.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo-area">
+            <h1>Dhunki Manager</h1>
+            <span class="badge">Lifetime Analytics</span>
+        </div>
+        <div class="actions">
+            <button class="btn" id="refresh-btn">Refresh Data</button>
+            <a href="index.html" class="btn btn-outline">Exit</a>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        
+        <!-- Top Metrics -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <h3>Total Revenue</h3>
+                <div class="metric-value" id="metric-revenue">₹0</div>
+            </div>
+            <div class="metric-card">
+                <h3>Total Orders</h3>
+                <div class="metric-value" id="metric-orders">0</div>
+                <div class="metric-sub" id="metric-cancelled">0 Cancelled</div>
+            </div>
+            <div class="metric-card">
+                <h3>Unique Devices (Users)</h3>
+                <div class="metric-value" id="metric-users">0</div>
+            </div>
+            <div class="metric-card">
+                <h3>Avg Time Spent</h3>
+                <div class="metric-value" id="metric-time">0m</div>
+                <div class="metric-sub">Per session</div>
+            </div>
+        </section>
+
+        <!-- Charts Row -->
+        <section class="charts-row">
+            <div class="chart-container">
+                <h2>Most Ordered Items</h2>
+                <canvas id="topItemsChart"></canvas>
+            </div>
+            <div class="side-panel">
+                <div class="panel-card">
+                    <h2>Top Frequently Bought Together</h2>
+                    <ul class="freq-list" id="freq-pairs-list">
+                        <!-- Injected -->
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Table -->
+        <section class="users-section">
+            <div class="section-header">
+                <h2>Device / User Registry</h2>
+                <p>Click a device ID to view lifetime profile.</p>
+            </div>
+            <div class="table-wrapper">
+                <table class="user-table">
+                    <thead>
+                        <tr>
+                            <th>Device ID</th>
+                            <th>First Visit</th>
+                            <th>Last Visit</th>
+                            <th>Orders</th>
+                            <th>Total Spent</th>
+                            <th>Avg Session</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-table-body">
+                        <!-- Injected -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- User Profile Modal -->
+    <div class="modal-overlay" id="user-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-modal">&times;</button>
+            <div class="modal-header">
+                <h2 id="modal-device-id">Device: XXXX</h2>
+                <span class="modal-badge">Lifetime Profile</span>
+            </div>
+            
+            <div class="modal-metrics">
+                <div class="m-metric">
+                    <span>Total Spent</span>
+                    <strong id="modal-spent">₹0</strong>
+                </div>
+                <div class="m-metric">
+                    <span>Total Orders</span>
+                    <strong id="modal-orders">0</strong>
+                </div>
+                <div class="m-metric">
+                    <span>Total Time</span>
+                    <strong id="modal-time">0m</strong>
+                </div>
+            </div>
+
+            <div class="modal-split">
+                <div class="modal-col">
+                    <h3>Favorite Items</h3>
+                    <ul class="modal-list" id="modal-favorites"></ul>
+                </div>
+                <div class="modal-col">
+                    <h3>Order History</h3>
+                    <div class="history-scroll" id="modal-history"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Analytics Engine to read DB -->
+    <script src="analytics.js"></script>
+    <script src="manager.js"></script>
+</body>
+</html>
